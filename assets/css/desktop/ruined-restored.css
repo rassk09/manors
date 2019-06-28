@@ -1,0 +1,244 @@
+.container {
+    padding-top: 5.8vw;
+    font-family: 'Gotham Pro Regular';
+    background-color: #f5f8fa;
+    clear: fix;
+    .left {
+        padding: 2vw 3.6vw 3vw 3.6vw;
+        width: 44.5vw;
+        float: left;
+        .preview {
+            font-size: 1vw;
+        }
+        .manor_name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.3vw;
+            font-weight: bold;
+            padding: 1vw 0 2vw;
+            span{
+                text-transform: uppercase;
+            }
+        }
+        .manor_card {
+            background-color: #ffffff;
+            width: 37vw;
+            height: 18.4vw;
+            box-shadow: 0vw 0.3vw 0.5vw rgba(0,0,0,0.15);
+            padding: 0 0 1vw;
+            .card_header {
+                clear: fix;
+                padding: 2.3vw 2.4vw 1vw;
+                .number {
+                    color: #1078d1;
+                    font-family: 'Playfair Display', serif;
+                    font-size: 1vw;
+                    font-weight: bold;
+                    float: left;
+                }
+                .show_map {
+                    color: #1078d1;
+                    font-size: 0.8vw;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    float: right;
+                    position: relative;
+                    &:before {
+                        content: '';
+                        @mixin io return-to-map, svg;
+                        display: block;
+                        width: 1.7vw;
+                        height: 1.7vw;
+                        background-position: center center;
+                        background-size: contain;
+                        position: absolute;
+                        top: -0.5vw;
+                        left: -2vw;
+                    }
+                }
+            }
+        }
+        .table {
+            padding: 0 2.4vw 1.3vw;
+            clear: fix;
+            font-size: 0.8vw;
+            .col {
+                width: 50%;
+                float: left;
+                &:first-child {
+                    border-right: 1px solid rgba(151, 151, 151, 0.13);
+                }
+                .cell {
+                    height: 6.2vw;
+                    position: relative;
+                    &:first-child {
+                        border-bottom: 1px solid rgba(151, 151, 151, 0.13);
+                    }
+                    p {
+                        padding: 0 2vw 0 4vw;
+                        &:first-child {
+                            padding-top: 2vw;
+                        }
+                    }
+                    .cell_title {
+                        font-weight: bold;
+                    }
+                }
+                .cell1:before {
+                    content: '';
+                    @mixin io address-2x-blue;
+                    display: block;
+                    width: 2vw;
+                    height: 2vw;
+                    position: absolute;
+                    background-size: contain;
+                    background-position: center center;
+                    top: 2vw;
+                    left: 1vw;
+                }
+                .cell2_ruined:before {
+                    content: '';
+                    @mixin io ruined, svg;
+                    display: block;
+                    width: 2vw;
+                    height: 2vw;
+                    position: absolute;
+                    background-size: contain;
+                    background-position: center center;
+                    top: 2vw;
+                    left: 1vw;
+                }
+                .cell2_restored:before {
+                    content: '';
+                    @mixin io restored, svg;
+                    display: block;
+                    width: 2vw;
+                    height: 2vw;
+                    position: absolute;
+                    background-size: contain;
+                    background-position: center center;
+                    top: 2vw;
+                    left: 1vw;
+                }
+                .cell3:before {
+                    content: '';
+                    @mixin io shield, svg;
+                    display: block;
+                    width: 2vw;
+                    height: 2vw;
+                    position: absolute;
+                    background-size: contain;
+                    background-position: center center;
+                    top: 2vw;
+                    left: 1vw;
+                }
+                .cell4:before {
+                    content: '';
+                    @mixin io key, svg;
+                    display: block;
+                    width: 2vw;
+                    height: 2vw;
+                    position: absolute;
+                    background-size: contain;
+                    background-position: center center;
+                    top: 1.8vw;
+                    left: 1vw;
+                }
+
+            }
+        }
+        .manor_info {
+            padding: 1vw 0 1vw;
+            .paragraph {
+                width: 37vw;
+                clear: fix;
+                padding: 1vw 0 1vw;
+                .item {
+                    width: auto;
+                    height: 2vw;
+                    display: block;
+                    float: left;
+                    font-size: 1vw;
+                    font-weight: bold;
+                    margin-right: 3.5vw;
+                }
+                .active_item {
+                    border-bottom: 2px solid #1078d1;
+                }
+            }
+            .info_text {
+                width: 37vw;
+                height: 14vw;
+                overflow-y: hidden;
+                font-size: 1vw;
+                line-height: 1.6vw;
+                position: relative;
+                p{
+                    padding-bottom: 2vw;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    width: 37vw;
+                    height: 7.2vw;
+                    background-image: linear-gradient(to top, #f5f8fa, rgba(255, 255, 255, 0));
+
+                }
+            }
+        }
+        .blue_button {
+            width: 9vw;
+            height: 2.7vw;
+            display: block;
+            text-align: center;
+            line-height: 2.7vw;
+            font-size: 1vw;
+            border: solid 1px #979797;
+            transition: 0.25s;
+            cursor: pointer;
+            color: black;
+            &:hover {
+                background-color: #010d25;
+                color: #ffffff;
+                border: solid 1px #010d25;
+            }
+            &:active {
+                background-color: #1078d1;
+                color: #ffffff;
+                border: solid 1px #1078d1;
+            }
+        }
+    }
+    .right {
+        width: 55.5vw;
+        float: left;
+        .gallery {
+            .big_photo {
+                width: 55.5vw;
+                height: 38.7vw;
+                background-size: cover;
+                background-position: center center;
+            }
+            .small_box {
+                clear: fix;
+                padding-top: 0.8vw;
+                .small_photo {
+                    width: 13.5vw;
+                    height: 8.5vw;
+                    background-size: cover;
+                    background-position: center center;
+                    display: block;
+                    float: left;
+                    cursor: pointer;
+                    &:nth-child(2) {
+                        margin: 0 .5vw 0 ;
+                    }
+                    &:nth-child(3) {
+                        margin: 0 .5vw 0 0;
+                    }
+                }
+            }
+        }
+    }
+}

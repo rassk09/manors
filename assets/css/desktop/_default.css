@@ -1,0 +1,97 @@
+:root {
+    --font-base: 'Roboto', sans-serif;;
+    --font: 'Open Sans', sans-serif;
+
+    --color-blue: #3E20B9;
+    --color-green: #50E3C2;
+    --color-red: #F1628B;
+    --color-ligth: #F9F9F9;
+    --color-white: #ffffff;
+    --color-aqua-marine: #50e3c2;
+
+    --color-font: #01034F;
+    --color-back: #4331AA;
+
+    --height-header: 58px;
+
+    --stormy-blue: #4b8a98;
+    --light-peach: #ffc8c8;
+    --light-pink: #ffe8f5;
+    --very-light-pink: #fff9f9;
+    --white: #f4f4f4;
+    --light-grey:#9b9b9b;
+    --dark-grey:#4a4a4a;
+
+}
+
+@font-face {
+    font-family: 'Gotham Pro Regular';
+    src: url('/fonts/GothamPro.eot');
+    src: url('/fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/GothamPro.woff') format('woff'),
+    url('/fonts/GothamPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham Pro Light';
+    src: url('/fonts/GothamPro-Light.eot');
+    src: url('/fonts/GothamPro-Light.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/GothamPro-Light.woff') format('woff'),
+    url('/fonts/GothamPro-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham Pro Medium Italic';
+    src: url('/fonts/GothamPro-MediumItalic.eot');
+    src: url('/fonts/GothamPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/GothamPro-MediumItalic.woff') format('woff'),
+    url('/fonts/GothamPro-MediumItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham Pro Bold';
+    src: url('/fonts/GothamPro-Bold.eot');
+    src: url('/fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/GothamPro-Bold.woff') format('woff'),
+    url('/fonts/GothamPro-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html, body {
+    font-family: var(--font-base);
+    min-width: 1000px;
+    line-height: 1.16;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    > img {
+        display: none;
+    }
+}
+.blue_button {
+    font-family: 'Playfair Display', serif;
+}
+
+input, button {
+    font-family: var(--font-base);
+    &:focus {
+      outline: 1px auto var(--color-font);
+    }
+}
+
+button {
+    cursor: pointer;
+    &[disabled] {
+        color: inherit;
+        cursor: default;
+    }
+}
+
+

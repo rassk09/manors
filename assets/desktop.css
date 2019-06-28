@@ -1,0 +1,12 @@
+@import url(css/desktop/_reset.css);
+@import url(css/desktop/_mixin.css);
+@import url(css/desktop/_default.css);
+
+@import url(../public/node_modules/swiper/dist/css/swiper.css);
+/*@import url(../public/node_modules/fancybox-master/dist/jquery.fancybox.min.css);*/
+
+@import url(css/desktop/header.css);
+@import url(css/desktop/index.css);
+@import url(css/desktop/ruined-restored.css);
+
+@import url(css/desktop/footer.css);

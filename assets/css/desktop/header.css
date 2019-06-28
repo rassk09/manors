@@ -1,0 +1,53 @@
+header {
+    width: 100%;
+    height: 5.8vw;
+    font-family: 'Playfair Display', serif;
+    position: fixed;
+    z-index: 100;
+    .menu {
+        height: 5.8vw;
+        padding-left: 4.8vw;
+        clear: fix;
+        background-color: #ffffff;
+        text-transform: uppercase;
+        li {
+            a {
+                font-family: 'Playfair Display', serif;
+                float: left;
+                padding: 2.4vw 2vw;
+                font-size: 1vw;
+                cursor: pointer;
+                line-height: 1vw;
+                transition: 0.25s;
+                &:hover {
+                    color: #1078d1;
+                }
+                &:active {
+                    color: #1078d1;
+                }
+            }
+            &:last-child {
+                position: relative;
+                line-height: 1vw;
+                a:before{
+                    content: '';
+                    @mixin io heart-not-filled, svg;
+                    background-size: contain;
+                    background-position: bottom center;
+                    display: inline-block;
+                    width: 1vw;
+                    height: 0.8vw;
+                    margin-right: 0.5vw;
+                    transition: 0.25s;
+                }
+            }
+            a:last-child:hover:before {
+                @mixin io heart-filled, svg;
+                width: 1vw;
+                height: 0.8vw;
+                background-size: contain;
+                background-position: bottom center;
+            }
+        }
+    }
+}

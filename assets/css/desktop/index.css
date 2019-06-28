@@ -1,0 +1,194 @@
+.main_screen {
+    font-family: 'Playfair Display', serif;;
+    @mixin io back2x, jpg;
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    height: 59vw;
+    padding-top: 5.8vw;
+    .main_logo {
+        width: 8.6vw;
+        height: 8.6vw;
+        margin-top: 1.6vw;
+        margin-left: 4.6vw;
+        p {
+            width: 8.6vw;
+            font-size: 1vw;
+            text-transform: uppercase;
+            padding: 0;
+        }
+        .logotype {
+            @mixin io bitmap2x;
+            background-size: cover;
+            background-position: center;
+            display: block;
+            width: 8.6vw;
+            height: 7.6vw;
+        }
+    }
+    .main_block {
+        padding-top: 3.5vw;
+        p {
+            font-size: 1.6vw;
+            line-height: 3vw;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            color: #1078d1;
+
+            &:after {
+                content: '';
+                display: inline-block;
+                width: 4.7vw;
+                height: 0.5vw;
+                border-top: 1px solid #1078d1;
+                margin: 0 2vw;
+            }
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 4.7vw;
+                height: 0.5vw;
+                border-top: 1px solid #1078d1;
+                margin: 0 2vw;
+            }
+        }
+        h1 {
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 3.3vw;
+            line-height: 5vw;
+            color: #1078d1;
+        }
+        .blue_button {
+            margin: 3vw auto;
+            width: 9vw;
+            height: 2.7vw;
+            display: block;
+            text-align: center;
+            line-height: 2.7vw;
+            font-size: 1vw;
+            border: solid 1px #979797;
+            transition: 0.25s;
+            cursor: pointer;
+            color: black;
+            &:hover {
+                background-color: #010d25;
+                color: #ffffff;
+                border: solid 1px #010d25;
+            }
+            &:active {
+                background-color: #1078d1;
+                color: #ffffff;
+                border: solid 1px #1078d1;
+            }
+        }
+    }
+}
+.about {
+    font-family: 'Playfair Display', serif;;
+    @mixin io back2-2x, jpg;
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    height: 59vw;
+    .info_block {
+        padding-top: 3.4vw;
+        width: 36.3vw;
+        margin-left: 9.5vw;
+        .title{
+            .first {
+                font-size: 3.3vw;
+                color: #89c4ec;
+                font-weight: bold;
+            }
+            span {
+                @mixin io th-2x;
+                display: block;
+                width: 20vw;
+                height: 9.7vw;
+                background-size: contain;
+                background-position: center;
+            }
+            .second {
+                font-size: 3.3vw;
+                color: #1078d1;
+                font-weight: bold;
+                text-align: center;
+            }
+            .third {
+                font-size: 2.3vw;
+                color: #1078d1;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        .text {
+            padding-top: 1vw;
+            font-size: 1vw;
+            line-height: 1.5vw;
+            font-family: 'Gotham Pro Regular';
+
+            color: #4a4a4a;
+        }
+        .button_block {
+            clear: fix;
+            padding: 1.5vw 0;
+            .button {
+                width: 16.7vw;
+                height: 4.4vw;
+                display: block;
+                font-size: 1vw;
+                text-align: center;
+                line-height: 4.4vw;
+                border: 1px solid #979797;
+                float: left;
+                cursor: pointer;
+                transition: 0.2s;
+                &:first-child {
+                    margin-right: 2vw;
+                }
+                &:hover {
+                    background-color: #010d25;
+                    color: #ffffff;
+                    border: solid 1px #010d25;
+                }
+                &:active {
+                    background-color: #1078d1;
+                    color: #ffffff;
+                    border: solid 1px #1078d1;
+                }
+            }
+        }
+        .more {
+            display: block;
+            width: 11.6vw;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1vw;
+            position: relative;
+            cursor: pointer;
+            transition: 0.25s;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                @mixin io line-2x;
+                width: 1vw;
+                height: 3vw;
+                background-size: contain;
+                background-position: center;
+                right: 5.8vw;
+                bottom: -4vw;
+                transition: 0.25s;
+            }
+            &:hover {
+                color: #1078d1
+            }
+        }
+        .more:hover:after {
+            bottom: -4.5vw;
+        }
+    }
+}

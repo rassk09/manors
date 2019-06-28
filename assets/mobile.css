@@ -1,0 +1,10 @@
+@import url(css/mobile/_reset.css);
+@import url(css/mobile/_mixin.css);
+@import url(css/mobile/_default.css);
+
+@import url(blocks/modal/bootstrap.css);
+@import url(blocks/modal/mobile/index.css);
+@import url(../public/node_modules/swiper/dist/css/swiper.css);
+
+@import url(css/mobile/footer.css);
+@import url(css/mobile/header.css);
