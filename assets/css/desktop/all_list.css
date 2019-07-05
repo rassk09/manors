@@ -228,10 +228,26 @@
             .filter_header {
                 width: 17.4vw;
                 height: 3.5vw;
-                .ico {
-                    width: 3.5vw;
+                background-color: #f3cb8e;
+                position: relative;
+                &:before {
+                    @mixin io filter, svg;
+                    content: '';
+                    display: block;
+                    width: 3.4vw;
                     height: 3.5vw;
-                    background-color: #f3cb8e;
+                    background-size: 40%;
+                    background-position: center center;
+                    position: absolute;
+                }
+                p {
+                    width: 14vw;
+                    text-align: center;
+                    display: block;
+                    float: left;
+                    line-height: 3.5vw;
+                    margin-left: 3.4vw;
+                    background-color: white;
                 }
             }
         }
