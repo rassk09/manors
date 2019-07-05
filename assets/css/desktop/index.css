@@ -1,6 +1,6 @@
 .main_screen {
-    font-family: 'Playfair Display', serif;;
     @mixin io back2x, jpg;
+    font-family: 'Playfair Display', serif;
     background-size: cover;
     background-position: top center;
     width: 100%;
@@ -87,8 +87,8 @@
     }
 }
 .about {
-    font-family: 'Playfair Display', serif;;
     @mixin io back2-2x, jpg;
+    font-family: 'Playfair Display', serif;
     background-size: cover;
     background-position: top center;
     width: 100%;
@@ -171,10 +171,10 @@
             cursor: pointer;
             transition: 0.25s;
             &:after {
+                @mixin io line-2x;
                 content: '';
                 display: block;
                 position: absolute;
-                @mixin io line-2x;
                 width: 1vw;
                 height: 3vw;
                 background-size: contain;

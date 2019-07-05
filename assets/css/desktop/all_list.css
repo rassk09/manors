@@ -1,0 +1,241 @@
+.container {
+    clear: fix;
+    .objects {
+        width: 75.6vw;
+        margin-left: 3vw;
+        float: left;
+        .search {
+            position: fixed;
+            top: 5.8vw;
+            background-color: #f5f8fa;
+            z-index: 1;
+            .search_menu {
+                background-color: #010d25;
+                width: 75.6vw;
+                .search_element {
+                    height: 3.9vw;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+            .info_string {
+                height: 4vw;
+                clear: fix;
+                a {
+                    display: block;
+                    color: #9b9b9b;
+                    font-size: 0.8vw;
+                    line-height: 4vw;
+                    height: 4vw;
+                    text-transform: uppercase;
+                    position: relative;
+                    padding: 0 2.5vw 0 1.8vw;
+                    float: left;
+                    cursor: pointer;
+                    &:first-child:before {
+                        @mixin io list, svg;
+                        content: '';
+                        display: block;
+                        width: 1.2vw;
+                        height: 1.2vw;
+                        background-size: contain;
+                        background-position: center center;
+                        position: absolute;
+                        top: 1.4vw;
+                        left: 0;
+                    }
+                    &:nth-child(2):before {
+                        @mixin io return-to-map, svg;
+                        content: '';
+                        display: block;
+                        width: 1.5vw;
+                        height: 1.5vw;
+                        background-size: contain;
+                        background-position: center center;
+                        position: absolute;
+                        top: 1.2vw;
+                        left: -.4vw;
+                    }
+                }
+                .blue_link {
+                    color: #1078d1;
+                    font-weight: bold;
+                }
+                .how_many {
+                    display: block;
+                    float: right;
+                    line-height: 4vw;
+                    font-size: 0.9vw;
+                    font-weight: lighter;
+
+                    span {
+                        font-style: italic;
+                        color: #9b9b9b;
+                    }
+                }
+            }
+        }
+        .manors {
+            clear: fix;
+            margin-top: 8vw;
+            display: none;
+            width: 75.6vw;
+            .single_manor {
+                float: left;
+                width: 18vw;
+                height: 26.3vw;
+                background-color: #ffffff;
+                margin-bottom: 1.6vw;
+                &:first-child {
+                    margin-right: 1.2vw;
+                }
+                &:nth-child(2) {
+                    margin-right: 1.2vw;
+                }
+                &:nth-child(3) {
+                    margin-right: 1.2vw;
+                }
+                &:nth-child(5) {
+                    margin-right: 1.2vw;
+                }
+                &:nth-child(6) {
+                    margin-right: 1.2vw;
+                }
+                &:nth-child(7) {
+                    margin-right: 1.2vw;
+                }
+                .card_photo {
+                    width: 18vw;
+                    height: 13.2vw;
+                    background-color: gainsboro;
+                    .brick {
+                        display: block;
+                        width: 2.8vw;
+                        height: 2.8vw;
+                        background-color: white;
+                        position: relative;
+                    }
+                    .like {
+                        @mixin io heart-not-filled, svg;
+                        display: block;
+                        width: 2.8vw;
+                        height: 2.8vw;
+                        background-position: center;
+                        background-size: 60%;
+                        background-color: #010d25;
+                    }
+                    .like_active {
+                        @mixin io heart-filled, svg;
+                        display: block;
+                        width: 2.8vw;
+                        height: 2.8vw;
+                        background-position: center;
+                        background-size: 60%;
+                        background-color: #010d25;
+                    }
+                    .ruined {
+                        @mixin io ruins, svg;
+                        background-size: 115%;
+                        background-position: center center;
+                        width: 2.8vw;
+                        height: 2.8vw;
+                    }
+                    .restored {
+                        @mixin io saved, svg;
+                        background-size: 115%;
+                        background-position: center center;
+                        width: 2.8vw;
+                        height: 2.8vw;
+                    }
+                }
+                .manor_address {
+                    .name {
+                        font-family: 'Playfair Display', serif;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        font-size: 0.9vw;
+                        padding: 1.2vw 0 0 1.1vw;
+                        display: block;
+                        height: 3vw;
+                    }
+                    .address {
+                        font-family: 'Gotham Pro Light';
+                        width: 13vw;
+                        height: 5vw;
+                        display: block;
+                        padding: 1.3vw 0 0 3.3vw;
+                        font-size: 0.8vw;
+                        position: relative;
+                        &:before {
+                            @mixin io address, svg;
+                            background-position: center;
+                            background-size: contain;
+                            content: '';
+                            display: block;
+                            width: 1.2vw;
+                            height: 1.5vw;
+                            position: absolute;
+                            top: 1.5vw;
+                            left: 1.2vw;
+                        }
+                    }
+                }
+                .blue_button {
+                    margin: 1vw auto;
+                    width: 9vw;
+                    height: 2.7vw;
+                    display: block;
+                    text-align: center;
+                    line-height: 2.7vw;
+                    font-size: 1vw;
+                    border: solid 1px #979797;
+                    transition: 0.25s;
+                    cursor: pointer;
+                    color: black;
+                    &:hover {
+                        background-color: #010d25;
+                        color: #ffffff;
+                        border: solid 1px #010d25;
+                    }
+                    &:active {
+                        background-color: #1078d1;
+                        color: #ffffff;
+                        border: solid 1px #1078d1;
+                    }
+                }
+            }
+        }
+        .map {
+            width: 75.6vw;
+            height: 44.6vw;
+            background-color: gainsboro;
+            display: none;
+        }
+        .on {
+            display: block;
+        }
+    }
+    .filters {
+        float: left;
+        width: 20vw;
+        position: relative;
+        .filter_body {
+            width: 17.4vw;
+            background-color: white;
+            position: fixed;
+            top: 13.8vw;
+            right: 2vw;
+            .filter_header {
+                width: 17.4vw;
+                height: 3.5vw;
+                .ico {
+                    width: 3.5vw;
+                    height: 3.5vw;
+                    background-color: #f3cb8e;
+                }
+            }
+        }
+    }
+}
+
+
