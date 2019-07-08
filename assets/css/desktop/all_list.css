@@ -219,7 +219,7 @@
         float: left;
         width: 20vw;
         position: relative;
-        .filter_body {
+        .filter {
             width: 17.4vw;
             background-color: white;
             position: fixed;
@@ -248,6 +248,83 @@
                     line-height: 3.5vw;
                     margin-left: 3.4vw;
                     background-color: white;
+                    font-style: italic;
+                }
+            }
+            .filter_body {
+                .filter_item {
+                    border-bottom: 1px solid rgba(151, 151, 151, 0.13);
+                    p {
+                        height: 4.4vw;
+                        padding-left: 1.6vw;
+                        line-height: 4.4vw;
+                        position: relative;
+                        &:after {
+                            content: '';
+                            display: block;
+                            width: 0.4vw;
+                            height: 0.4vw;
+                            border-top: 2px solid #1078d1;
+                            border-right: 2px solid #1078d1;
+                            position: absolute;
+                            top: 2vw;
+                            right: 2vw;
+                            transform: rotate(45deg);
+                        }
+                    }
+                    ul {
+                        display: block;
+                        padding-left: 1.6vw;
+                        padding-bottom: 0.8vw;
+                    }
+                    .styled-checkbox {
+                        position: absolute;
+                        opacity: 0;
+
+                        & + label {
+                            position: relative;
+                            cursor: pointer;
+                            padding: 0;
+                        }
+                        & + label:before {
+                            content: '';
+                            margin-right: 10px;
+                            display: inline-block;
+                            vertical-align: text-top;
+                            width: 3vw;
+                            height: 1vw;
+                            background: white;
+                            border: 1px solid black;
+                        }
+                        &:hover + label:before {
+                            background: #1078d1;
+                           
+                        }
+                        &:focus + label:before {
+                            background: #1078d1;
+                        }
+                        &:checked + label:before {
+                            background: #1078d1;
+                        }
+                        &:disabled + label {
+                            color: #b8b8b8;
+                            cursor: auto;
+                        }
+                        &:disabled + label:before {
+                            box-shadow: none;
+                            background: #ddd;
+                        }
+                        &:checked + label:after {
+                            content: '';
+                            position: absolute;
+                            left: 1px;
+                            top: 1px;
+                            background: #1078d1;
+                            width: 0.8vw;
+                            height: 0.8vw;
+                        }
+                    }
+
                 }
             }
         }
