@@ -3,9 +3,11 @@ import 'babel-polyfill';
 import 'expose-loader?$!expose-loader?jQuery!jquery'; // подключил jquery, что бы он был виден глобально(в том числе из консоли)
 
 //import Swiper from 'swiper';
-import Swiper from 'swiper/dist/js/swiper.js';
+
 
  // let isMobile = $('body').hasClass('mobile');
+
+import Swiper from 'swiper/dist/js/swiper.js';
 
 let gallery = (function () {
     $('.small_photo').click(function () {
@@ -54,4 +56,36 @@ manorSearch = (function () {
             $('.first_text').removeClass('visible_text');
             $('.third_text').addClass('visible_text');
         });
-    })()
+    })(),
+    visibleUl = (function () {
+       $('.item_name1').click(function () {
+           $('.item_name1').addClass('item_name_active');
+           $('.item_name2').removeClass('item_name_active');
+           $('.item_name3').removeClass('item_name_active');
+           $('.checkboxes1').slideDown();
+           $('.checkboxes2').slideUp();
+           $('.checkboxes3').slideUp();
+       });
+        $('.item_name2').click(function () {
+            $('.item_name2').addClass('item_name_active');
+            $('.item_name1').removeClass('item_name_active');
+            $('.item_name3').removeClass('item_name_active');
+            $('.checkboxes2').slideDown();
+            $('.checkboxes1').slideUp();
+            $('.checkboxes3').slideUp();
+        });
+        $('.item_name3').click(function () {
+            $('.item_name3').addClass('item_name_active');
+            $('.item_name2').removeClass('item_name_active');
+            $('.item_name1').removeClass('item_name_active');
+            $('.checkboxes3').slideDown();
+            $('.checkboxes2').slideUp();
+            $('.checkboxes1').slideUp();
+        });
+    })(),
+    slider = (function(){
+    var mySwiper = new Swiper('.gallery .swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 5,
+    });
+})()

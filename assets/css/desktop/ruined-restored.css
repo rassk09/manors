@@ -194,8 +194,8 @@
                     font-size: 1vw;
                     line-height: 1.6vw;
                     transition: 0.25s;
-                    p{
-                        padding: 0 1vw 2vw 0 ;
+                    p {
+                        padding: 0 2vw 2vw 0 ;
                     }
                 }
                 .second_text {
@@ -203,8 +203,8 @@
                     font-size: 1vw;
                     line-height: 1.6vw;
                     transition: 0.25s;
-                    p{
-                        padding: 0 1vw 2vw 0 ;
+                    p {
+                        padding: 0 2vw 2vw 0 ;
                     }
                 }
                 .third_text {
@@ -212,8 +212,8 @@
                     font-size: 1vw;
                     line-height: 1.6vw;
                     transition: 0.25s;
-                    p{
-                        padding: 0 1vw 2vw 0 ;
+                    p {
+                        padding: 0 2vw 2vw 0 ;
                     }
                 }
                 .visible_text {
@@ -281,12 +281,6 @@
                     display: block;
                     float: left;
                     cursor: pointer;
-                    &:nth-child(2) {
-                        margin: 0 .2vw 0 ;
-                    }
-                    &:nth-child(3) {
-                        margin: 0 .2vw 0 0;
-                    }
                 }
             }
         }

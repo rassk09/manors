@@ -86,6 +86,7 @@
                 height: 26.3vw;
                 background-color: #ffffff;
                 margin-bottom: 1.6vw;
+                box-shadow: 0vw 0.2vw 0.3vw rgba(0,0,0,0.15);
                 &:first-child {
                     margin-right: 1.2vw;
                 }
@@ -259,6 +260,10 @@
                         padding-left: 1.6vw;
                         line-height: 4.4vw;
                         position: relative;
+                        color: #4a4a4a;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        cursor: pointer;
                         &:after {
                             content: '';
                             display: block;
@@ -270,17 +275,37 @@
                             top: 2vw;
                             right: 2vw;
                             transform: rotate(45deg);
+                            transition: 0.25s;
                         }
                     }
-                    ul {
+                    .item_name_active:after {
+                        content: '';
                         display: block;
+                        width: 0.4vw;
+                        height: 0.4vw;
+                        border-top: 2px solid #1078d1;
+                        border-right: 2px solid #1078d1;
+                        position: absolute;
+                        top: 2vw;
+                        right: 2vw;
+                        transform: rotate(135deg);
+                        transition: 0.25s;
+                    }
+                    ul {
+                        display: none;
                         padding-left: 1.6vw;
                         padding-bottom: 0.8vw;
+                        color: #4a4a4a;
+                        li {
+                            padding: 0.2vw 0 0.2vw 0;
+                        }
+                    }
+                    .ul_visible {
+                        display: block;
                     }
                     .styled-checkbox {
                         position: absolute;
                         opacity: 0;
-
                         & + label {
                             position: relative;
                             cursor: pointer;
@@ -288,43 +313,31 @@
                         }
                         & + label:before {
                             content: '';
-                            margin-right: 10px;
+                            margin-right: 0.7vw;
                             display: inline-block;
                             vertical-align: text-top;
-                            width: 3vw;
+                            width: 1vw;
                             height: 1vw;
                             background: white;
                             border: 1px solid black;
                         }
-                        &:hover + label:before {
-                            background: #1078d1;
-                           
-                        }
-                        &:focus + label:before {
-                            background: #1078d1;
-                        }
-                        &:checked + label:before {
-                            background: #1078d1;
-                        }
-                        &:disabled + label {
-                            color: #b8b8b8;
-                            cursor: auto;
-                        }
-                        &:disabled + label:before {
-                            box-shadow: none;
-                            background: #ddd;
-                        }
                         &:checked + label:after {
+                            @mixin io check;
                             content: '';
+                            margin-right: 0.7vw;
+                            display: inline-block;
+                            vertical-align: text-top;
+                            width: 1vw;
+                            height: 1vw;
+                            box-sizing: border-box;
+                            border: 1px solid black;
                             position: absolute;
-                            left: 1px;
-                            top: 1px;
-                            background: #1078d1;
-                            width: 0.8vw;
-                            height: 0.8vw;
+                            top: 0;
+                            left: 0;
+                            background-size: 60%;
+                            background-position: center center;
                         }
                     }
-
                 }
             }
         }

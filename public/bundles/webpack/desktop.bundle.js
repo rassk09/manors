@@ -3056,8 +3056,6 @@ var _swiper2 = _interopRequireDefault(_swiper);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// let isMobile = $('body').hasClass('mobile');
-
 // import Promise from 'es6-promise-promise'; // нужен^ если используется require.ensure, для ie11-
 var gallery = function () {
     $('.small_photo').click(function () {
@@ -3106,9 +3104,44 @@ var gallery = function () {
         $('.first_text').removeClass('visible_text');
         $('.third_text').addClass('visible_text');
     });
+}(),
+    visibleUl = function () {
+    $('.item_name1').click(function () {
+        $('.item_name1').addClass('item_name_active');
+        $('.item_name2').removeClass('item_name_active');
+        $('.item_name3').removeClass('item_name_active');
+        $('.checkboxes1').slideDown();
+        $('.checkboxes2').slideUp();
+        $('.checkboxes3').slideUp();
+    });
+    $('.item_name2').click(function () {
+        $('.item_name2').addClass('item_name_active');
+        $('.item_name1').removeClass('item_name_active');
+        $('.item_name3').removeClass('item_name_active');
+        $('.checkboxes2').slideDown();
+        $('.checkboxes1').slideUp();
+        $('.checkboxes3').slideUp();
+    });
+    $('.item_name3').click(function () {
+        $('.item_name3').addClass('item_name_active');
+        $('.item_name2').removeClass('item_name_active');
+        $('.item_name1').removeClass('item_name_active');
+        $('.checkboxes3').slideDown();
+        $('.checkboxes2').slideUp();
+        $('.checkboxes1').slideUp();
+    });
+}(),
+    slider = function () {
+    var mySwiper = new _swiper2.default('.gallery .swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 5
+    });
 }(); // подключил jquery, что бы он был виден глобально(в том числе из консоли)
 
 //import Swiper from 'swiper';
+
+
+// let isMobile = $('body').hasClass('mobile');
 
 /***/ }),
 /* 94 */
