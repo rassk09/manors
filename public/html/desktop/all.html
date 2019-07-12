@@ -9,19 +9,22 @@
         <!-- fonts -->
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=cyrillic" rel="stylesheet">
         <link href="/bundles/css/desktop.min.css" rel="stylesheet">
+        <!--<link href="/fullPage.js-master/fullPage.js-master/dist/fullpage.min.css" rel="stylesheet">-->
+        <!--<link href="/bootstrap-select-1.13.9/bootstrap-select-1.13.9/dist/css/bootstrap-select.min.css" rel="stylesheet">-->
+        <!--<link href="/bootstrap-4.3.1/dist/css/bootstrap.min.css" rel="stylesheet">-->
         <!--<link href="/onepage-scroll-master/onepage-scroll.css" rel="stylesheet">-->
 
     </head>
 <body>
 <header>
     <ul class="menu">
-        <li><a>главная</a></li>
-        <li><a>о проекте</a></li>
-        <li><a>заброшенные усадьбы</a></li>
-        <li><a>возрожденные усадьбы</a></li>
-        <li><a>приватизация усадеб</a></li>
-        <li><a>контакты</a></li>
-        <li class="chosen"><a>избранное</a></li>
+        <li><a href="#">главная</a></li>
+        <li><a href="#">о проекте</a></li>
+        <li><a href="#">заброшенные усадьбы</a></li>
+        <li><a href="#">возрожденные усадьбы</a></li>
+        <li><a href="#">приватизация усадеб</a></li>
+        <li><a href="#">контакты</a></li>
+        <li class="chosen"><a href="#">избранное</a></li>
     </ul>
 </header>
 
@@ -29,29 +32,38 @@
 <!-- CONTENT START -->
 <!-- ############# -->
 
-<div class="container">
-    <div class="objects">
-        <div class="search">
+<div class="cont">
+    <div class="obj">
+        <div class="search_body">
             <form class="search_menu">
-                <select class="search_element region"></select>
-                <select class="search_element area"></select>
-                <input type="search" class="search_element">
+                <select class="search_element region_search selectpicker" title="dfg">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Barbecue</option>
+                    <option>Barbecue</option>
+                    <option>Barbecue</option>
+                    <option>Barbecue</option>
+                    <option>Barbecue</option>
+                    <option>Barbecue</option>
+                </select>
+                <select class="search_element area selectpicker" title="dfg"></select>
+                <input type="search" class="search_element search_input" title="dfg">
             </form>
             <div class="info_string">
                 <a class="list_on">Списком</a>
                 <a class="map_on">на карте</a>
-                <p class="how_many">Найдено <span>100 объектов</span></p>
+                <div class="how_many">Найдено <span>100 объектов</span></div>
             </div>
         </div>
-        <div class="manors on">
+        <div class="manors manor_on">
             <div class="single_manor">
                 <div class="card_photo">
                     <div class="like brick"></div>
                     <div class="type ruined brick"></div>
                 </div>
-                <div class="manor_address">
-                    <p class="name">Усадьба Веневитиновых (Горожанка)</p>
-                    <p class="address">Воронежская область, Рамонский район, с. Русская Гвоздёвка, ул. Донская д.1</p>
+                <div class="manor_info">
+                    <div class="manor_name">Усадьба Веневитиновых (Горожанка)</div>
+                    <div class="manor_address">Воронежская область, Рамонский район, с. Русская Гвоздёвка, ул. Донская д.1</div>
                     <div class="blue_button">Подробнее</div>
                 </div>
             </div>
@@ -60,9 +72,9 @@
                     <div class="like like_active brick"></div>
                     <div class="type restored brick"></div>
                 </div>
-                <div class="manor_address">
-                    <p class="name">Дом Белюстина</p>
-                    <p class="address">Тверская область, Калязин, улица Карла Маркса</p>
+                <div class="manor_info">
+                    <div class="manor_name">Дом Белюстина</div>
+                    <div class="manor_address">Тверская область, Калязин, улица Карла Маркса</div>
                     <div class="blue_button">Подробнее</div>
                 </div>
             </div>
@@ -71,9 +83,9 @@
                         <div class="like brick"></div>
                         <div class="type restored brick"></div>
                 </div>
-                <div class="manor_address">
-                    <p class="name">Усадьба Пашковых</p>
-                    <p class="address">Нижегородская область, Гагинский район, с. Ветошкино</p>
+                <div class="manor_info">
+                    <div class="manor_name">Усадьба Пашковых</div>
+                    <div class="manor_address">Нижегородская область, Гагинский район, с. Ветошкино</div>
                     <div class="blue_button">Подробнее</div>
                 </div>
             </div>
@@ -82,9 +94,9 @@
                     <div class="like brick"></div>
                     <div class="type ruined brick"></div>
                 </div>
-                <div class="manor_address">
-                    <p class="name">Усадьба Капканщикова</p>
-                    <p class="address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</p>
+                <div class="manor_info">
+                    <div class="manor_name">Усадьба Капканщикова</div>
+                    <div class="manor_address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</div>
                     <div class="blue_button">Подробнее</div>
                 </div>
             </div>
@@ -93,9 +105,9 @@
                     <div class="like brick"></div>
                     <div class="type restored brick"></div>
                 </div>
-                <div class="manor_address">
-                    <p class="name">Усадьба Волосово</p>
-                    <p class="address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</p>
+                <div class="manor_info">
+                    <div class="manor_name">Усадьба Волосово</div>
+                    <div class="manor_address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</div>
                     <div class="blue_button">Подробнее</div>
                 </div>
             </div>
@@ -104,9 +116,9 @@
                     <div class="like brick"></div>
                     <div class="type restored brick"></div>
                 </div>
-                <div class="manor_address">
-                    <p class="name">Усадьба Зубовых, Полежаевых, Соколовых</p>
-                    <p class="address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</p>
+                <div class="manor_info">
+                    <div class="manor_name">Усадьба Зубовых, Полежаевых, Соколовых</div>
+                    <div class="manor_address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</div>
                     <div class="blue_button">Подробнее</div>
                 </div>
             </div>
@@ -115,9 +127,9 @@
                     <div class="like brick"></div>
                     <div class="type ruined brick"></div>
                 </div>
-                <div class="manor_address">
-                    <p class="name">Усадьба Чертковых</p>
-                    <p class="address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</p>
+                <div class="manor_info">
+                    <div class="manor_name">Усадьба Чертковых</div>
+                    <div class="manor_address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</div>
                     <div class="blue_button">Подробнее</div>
                 </div>
             </div>
@@ -126,9 +138,9 @@
                     <div class="like brick"></div>
                     <div class="type ruined brick"></div>
                 </div>
-                <div class="manor_address">
-                    <p class="name">Усадьба Чубова</p>
-                    <p class="address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</p>
+                <div class="manor_info">
+                    <div class="manor_name">Усадьба Чубова</div>
+                    <div class="manor_address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</div>
                     <div class="blue_button">Подробнее</div>
                 </div>
             </div>
@@ -138,11 +150,11 @@
     <div class="filters">
         <div class="filter">
             <div class="filter_header">
-                <p>Настроить фильтры</p>
+                <div class="filter_title">Настроить фильтры</div>
             </div>
             <div class="filter_body">
                 <div class="filter_item">
-                    <p class="item_name1">Вид собственности</p>
+                    <div class="item_name item_name1">Вид собственности</div>
                     <ul class="checkboxes1">
                         <li>
                             <input class="styled-checkbox" type="checkbox" id="checkbox_1">
@@ -159,7 +171,7 @@
                     </ul>
                 </div>
                 <div class="filter_item">
-                    <p class="item_name2">Владельцы</p>
+                    <div class="item_name item_name2">Владельцы</div>
                     <ul class="checkboxes2">
                         <li>
                             <input class="styled-checkbox" type="checkbox" id="checkbox_4">
@@ -172,7 +184,7 @@
                     </ul>
                 </div>
                 <div class="filter_item">
-                    <p class="item_name3">Состояние усадьбы</p>
+                    <div class="item_name item_name3">Состояние усадьбы</div>
                     <ul class="checkboxes3">
                         <li>
                             <input class="styled-checkbox" type="checkbox" id="checkbox_6">
@@ -220,9 +232,16 @@
 
 
 <script src="/bundles/webpack/vendor.bundle.js"></script>
-<script src="/bundles/webpack/desktop.bundle.js"></script>
-<script src="/onepage-scroll-master/my.js"></script>
 
+<!--<script src="/node_modules/onepage-scroll-master/jquery.onepage-scroll.min.js"></script>-->
+
+
+<!--<script src="/fullPage.js-master/fullPage.js-master/dist/fullpage.extensions.min.js"></script>-->
+<!--<script src="/node_modules/bootstrap-select/bootstrap-select-1.13.9/dist/js/bootstrap-select.min.js"></script>-->
+
+
+
+<script src="/bundles/webpack/desktop.bundle.js"></script>
 
 </body>
 </html>

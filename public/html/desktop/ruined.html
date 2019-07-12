@@ -9,19 +9,22 @@
         <!-- fonts -->
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=cyrillic" rel="stylesheet">
         <link href="/bundles/css/desktop.min.css" rel="stylesheet">
+        <!--<link href="/fullPage.js-master/fullPage.js-master/dist/fullpage.min.css" rel="stylesheet">-->
+        <!--<link href="/bootstrap-select-1.13.9/bootstrap-select-1.13.9/dist/css/bootstrap-select.min.css" rel="stylesheet">-->
+        <!--<link href="/bootstrap-4.3.1/dist/css/bootstrap.min.css" rel="stylesheet">-->
         <!--<link href="/onepage-scroll-master/onepage-scroll.css" rel="stylesheet">-->
 
     </head>
 <body>
 <header>
     <ul class="menu">
-        <li><a>главная</a></li>
-        <li><a>о проекте</a></li>
-        <li><a>заброшенные усадьбы</a></li>
-        <li><a>возрожденные усадьбы</a></li>
-        <li><a>приватизация усадеб</a></li>
-        <li><a>контакты</a></li>
-        <li class="chosen"><a>избранное</a></li>
+        <li><a href="#">главная</a></li>
+        <li><a href="#">о проекте</a></li>
+        <li><a href="#">заброшенные усадьбы</a></li>
+        <li><a href="#">возрожденные усадьбы</a></li>
+        <li><a href="#">приватизация усадеб</a></li>
+        <li><a href="#">контакты</a></li>
+        <li class="chosen"><a href="#">избранное</a></li>
     </ul>
 </header>
 
@@ -29,38 +32,37 @@
 <!-- CONTENT START -->
 <!-- ############# -->
 
-<section class="container">
+<section class="cont">
     <div class="left">
-        <a class="preview">Назад</a>
+        <a class="preview">&#60; Назад</a>
         <div class="about_manor">
             <p class="manor_name">Усадьба <span>КАРГАШИНО</span></p>
             <div class="manor_card">
                 <div class="card_header">
-                    <p class="number">Реестровый №1233456</p>
+                    <div class="number">Реестровый №1233456</div>
                     <a class="show_map">смотреть на карте</a>
                 </div>
                 <div class="table">
-                    <div class="col">
+                    <div class="col col_left">
                         <div class="cell cell1">
-                            <p class="cell_title">Адрес:</p>
-                            <p class="cell_text">Рязанская область, Сасовский район</p>
+                            <div class="cell_title">Адрес:</div>
+                            <div class="cell_text">Рязанская область, Сасовский район</div>
                         </div>
                         <div class="cell cell2_ruined">
-                            <p class="cell_title">Состояние усадьбы:</p>
-                            <p class="cell_text">Заброшенная</p>
+                            <div class="cell_title">Состояние усадьбы:</div>
+                            <div class="cell_text">Заброшенная</div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col col_right">
                         <div class="cell cell3">
-                            <p class="cell_title">Вид собственности:</p>
-                            <p class="cell_text">Региональная</p>
+                            <div class="cell_title">Вид собственности:</div>
+                            <div class="cell_text">Региональная</div>
                         </div>
                         <div class="cell cell4">
-                            <p class="cell_title">Владельцы:</p>
-                            <p class="cell_text">Отсутствуют</p>
+                            <div class="cell_title">Владельцы:</div>
+                            <div class="cell_text">Отсутствуют</div>
                         </div>
                     </div>
-
                 </div>
             </div>
             <div class="manor_info">
@@ -69,7 +71,7 @@
                     <div class="item second_item">Потенциал усадьбы</div>
                     <div class="item third_item">Новости</div>
                 </div>
-                <div class="info_text" id="scrollbar_style">
+                <div class="info_text scrollbar_style">
                     <div class="first_text visible_text">
                         <p>«…больше всего на свете Владимир Федорович любил, чтобы все было миром и ладом, а не любил больше всего, когда ругаются»</p>
                         <p>
@@ -135,9 +137,16 @@
 
 
 <script src="/bundles/webpack/vendor.bundle.js"></script>
-<script src="/bundles/webpack/desktop.bundle.js"></script>
-<script src="/onepage-scroll-master/my.js"></script>
 
+<!--<script src="/node_modules/onepage-scroll-master/jquery.onepage-scroll.min.js"></script>-->
+
+
+<!--<script src="/fullPage.js-master/fullPage.js-master/dist/fullpage.extensions.min.js"></script>-->
+<!--<script src="/node_modules/bootstrap-select/bootstrap-select-1.13.9/dist/js/bootstrap-select.min.js"></script>-->
+
+
+
+<script src="/bundles/webpack/desktop.bundle.js"></script>
 
 </body>
 </html>

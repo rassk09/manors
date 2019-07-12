@@ -1,28 +1,37 @@
 @@include('templates/desktop/include/header.html')
 
-<div class="container">
-    <div class="objects">
-        <div class="search">
+<div class="cont">
+    <div class="obj">
+        <div class="search_body">
             <form class="search_menu">
-                <select class="search_element region"></select>
-                <select class="search_element area"></select>
-                <input type="search" class="search_element">
+                <select class="search_element region_search selectpicker" title="dfg">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Barbecue</option>
+                    <option>Barbecue</option>
+                    <option>Barbecue</option>
+                    <option>Barbecue</option>
+                    <option>Barbecue</option>
+                    <option>Barbecue</option>
+                </select>
+                <select class="search_element area selectpicker" title="dfg"></select>
+                <input type="search" class="search_element search_input" title="dfg">
             </form>
             <div class="info_string">
                 <a class="list_on">Списком</a>
                 <a class="map_on">на карте</a>
-                <p class="how_many">Найдено <span>100 объектов</span></p>
+                <div class="how_many">Найдено <span>100 объектов</span></div>
             </div>
         </div>
-        <div class="manors on">
+        <div class="manors manor_on">
             <div class="single_manor">
                 <div class="card_photo">
                     <div class="like brick"></div>
                     <div class="type ruined brick"></div>
                 </div>
-                <div class="manor_address">
-                    <p class="name">Усадьба Веневитиновых (Горожанка)</p>
-                    <p class="address">Воронежская область, Рамонский район, с. Русская Гвоздёвка, ул. Донская д.1</p>
+                <div class="manor_info">
+                    <div class="manor_name">Усадьба Веневитиновых (Горожанка)</div>
+                    <div class="manor_address">Воронежская область, Рамонский район, с. Русская Гвоздёвка, ул. Донская д.1</div>
                     <div class="blue_button">Подробнее</div>
                 </div>
             </div>
@@ -31,9 +40,9 @@
                     <div class="like like_active brick"></div>
                     <div class="type restored brick"></div>
                 </div>
-                <div class="manor_address">
-                    <p class="name">Дом Белюстина</p>
-                    <p class="address">Тверская область, Калязин, улица Карла Маркса</p>
+                <div class="manor_info">
+                    <div class="manor_name">Дом Белюстина</div>
+                    <div class="manor_address">Тверская область, Калязин, улица Карла Маркса</div>
                     <div class="blue_button">Подробнее</div>
                 </div>
             </div>
@@ -42,9 +51,9 @@
                         <div class="like brick"></div>
                         <div class="type restored brick"></div>
                 </div>
-                <div class="manor_address">
-                    <p class="name">Усадьба Пашковых</p>
-                    <p class="address">Нижегородская область, Гагинский район, с. Ветошкино</p>
+                <div class="manor_info">
+                    <div class="manor_name">Усадьба Пашковых</div>
+                    <div class="manor_address">Нижегородская область, Гагинский район, с. Ветошкино</div>
                     <div class="blue_button">Подробнее</div>
                 </div>
             </div>
@@ -53,9 +62,9 @@
                     <div class="like brick"></div>
                     <div class="type ruined brick"></div>
                 </div>
-                <div class="manor_address">
-                    <p class="name">Усадьба Капканщикова</p>
-                    <p class="address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</p>
+                <div class="manor_info">
+                    <div class="manor_name">Усадьба Капканщикова</div>
+                    <div class="manor_address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</div>
                     <div class="blue_button">Подробнее</div>
                 </div>
             </div>
@@ -64,9 +73,9 @@
                     <div class="like brick"></div>
                     <div class="type restored brick"></div>
                 </div>
-                <div class="manor_address">
-                    <p class="name">Усадьба Волосово</p>
-                    <p class="address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</p>
+                <div class="manor_info">
+                    <div class="manor_name">Усадьба Волосово</div>
+                    <div class="manor_address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</div>
                     <div class="blue_button">Подробнее</div>
                 </div>
             </div>
@@ -75,9 +84,9 @@
                     <div class="like brick"></div>
                     <div class="type restored brick"></div>
                 </div>
-                <div class="manor_address">
-                    <p class="name">Усадьба Зубовых, Полежаевых, Соколовых</p>
-                    <p class="address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</p>
+                <div class="manor_info">
+                    <div class="manor_name">Усадьба Зубовых, Полежаевых, Соколовых</div>
+                    <div class="manor_address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</div>
                     <div class="blue_button">Подробнее</div>
                 </div>
             </div>
@@ -86,9 +95,9 @@
                     <div class="like brick"></div>
                     <div class="type ruined brick"></div>
                 </div>
-                <div class="manor_address">
-                    <p class="name">Усадьба Чертковых</p>
-                    <p class="address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</p>
+                <div class="manor_info">
+                    <div class="manor_name">Усадьба Чертковых</div>
+                    <div class="manor_address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</div>
                     <div class="blue_button">Подробнее</div>
                 </div>
             </div>
@@ -97,9 +106,9 @@
                     <div class="like brick"></div>
                     <div class="type ruined brick"></div>
                 </div>
-                <div class="manor_address">
-                    <p class="name">Усадьба Чубова</p>
-                    <p class="address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</p>
+                <div class="manor_info">
+                    <div class="manor_name">Усадьба Чубова</div>
+                    <div class="manor_address">Воронежская область, Панинский район, с. Большой Мартын, ул. Совхозная 4, 5</div>
                     <div class="blue_button">Подробнее</div>
                 </div>
             </div>
@@ -109,11 +118,11 @@
     <div class="filters">
         <div class="filter">
             <div class="filter_header">
-                <p>Настроить фильтры</p>
+                <div class="filter_title">Настроить фильтры</div>
             </div>
             <div class="filter_body">
                 <div class="filter_item">
-                    <p class="item_name1">Вид собственности</p>
+                    <div class="item_name item_name1">Вид собственности</div>
                     <ul class="checkboxes1">
                         <li>
                             <input class="styled-checkbox" type="checkbox" id="checkbox_1">
@@ -130,7 +139,7 @@
                     </ul>
                 </div>
                 <div class="filter_item">
-                    <p class="item_name2">Владельцы</p>
+                    <div class="item_name item_name2">Владельцы</div>
                     <ul class="checkboxes2">
                         <li>
                             <input class="styled-checkbox" type="checkbox" id="checkbox_4">
@@ -143,7 +152,7 @@
                     </ul>
                 </div>
                 <div class="filter_item">
-                    <p class="item_name3">Состояние усадьбы</p>
+                    <div class="item_name item_name3">Состояние усадьбы</div>
                     <ul class="checkboxes3">
                         <li>
                             <input class="styled-checkbox" type="checkbox" id="checkbox_6">

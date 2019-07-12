@@ -1,10 +1,10 @@
-.container {
+.cont {
     clear: fix;
-    .objects {
+    .obj {
         width: 75.6vw;
         margin-left: 3vw;
         float: left;
-        .search {
+        .search_body {
             position: fixed;
             top: 5.8vw;
             background-color: #f5f8fa;
@@ -16,6 +16,11 @@
                     height: 3.9vw;
                     padding: 0;
                     margin: 0;
+                    background-color: #010d25;
+                }
+                .search_input {
+                    width: 35.6vw;
+                    outline: ;
                 }
             }
             .info_string {
@@ -67,7 +72,6 @@
                     line-height: 4vw;
                     font-size: 0.9vw;
                     font-weight: lighter;
-
                     span {
                         font-style: italic;
                         color: #9b9b9b;
@@ -149,8 +153,8 @@
                         height: 2.8vw;
                     }
                 }
-                .manor_address {
-                    .name {
+                .manor_info {
+                    .manor_name {
                         font-family: 'Playfair Display', serif;
                         font-weight: bold;
                         text-transform: uppercase;
@@ -159,12 +163,12 @@
                         display: block;
                         height: 3vw;
                     }
-                    .address {
+                    .manor_address {
                         font-family: 'Gotham Pro Light';
                         width: 13vw;
                         height: 5vw;
                         display: block;
-                        padding: 1.3vw 0 0 3.3vw;
+                        padding: 1vw 0 0 3.3vw;
                         font-size: 0.8vw;
                         position: relative;
                         &:before {
@@ -212,7 +216,7 @@
             background-color: gainsboro;
             display: none;
         }
-        .on {
+        .manor_on {
             display: block;
         }
     }
@@ -241,8 +245,9 @@
                     background-position: center center;
                     position: absolute;
                 }
-                p {
+                .filter_title {
                     width: 14vw;
+                    height: 3.5vw;
                     text-align: center;
                     display: block;
                     float: left;
@@ -250,12 +255,13 @@
                     margin-left: 3.4vw;
                     background-color: white;
                     font-style: italic;
+                    font-size: 0.8vw;
                 }
             }
             .filter_body {
                 .filter_item {
                     border-bottom: 1px solid rgba(151, 151, 151, 0.13);
-                    p {
+                    .item_name {
                         height: 4.4vw;
                         padding-left: 1.6vw;
                         line-height: 4.4vw;
@@ -264,16 +270,17 @@
                         font-weight: bold;
                         text-transform: uppercase;
                         cursor: pointer;
+                        font-size: 0.8vw;
                         &:after {
                             content: '';
                             display: block;
                             width: 0.4vw;
                             height: 0.4vw;
-                            border-top: 2px solid #1078d1;
-                            border-right: 2px solid #1078d1;
+                            border-top: 0.1vw solid #1078d1;
+                            border-right: 0.1vw solid #1078d1;
                             position: absolute;
                             top: 2vw;
-                            right: 2vw;
+                            right: 1.8vw;
                             transform: rotate(45deg);
                             transition: 0.25s;
                         }
@@ -283,11 +290,11 @@
                         display: block;
                         width: 0.4vw;
                         height: 0.4vw;
-                        border-top: 2px solid #1078d1;
-                        border-right: 2px solid #1078d1;
+                        border-top: 0.1vw solid #1078d1;
+                        border-right: 0.1vw solid #1078d1;
                         position: absolute;
                         top: 2vw;
-                        right: 2vw;
+                        right: 1.8vw;
                         transform: rotate(135deg);
                         transition: 0.25s;
                     }
@@ -296,6 +303,7 @@
                         padding-left: 1.6vw;
                         padding-bottom: 0.8vw;
                         color: #4a4a4a;
+                        font-size: 0.8vw;
                         li {
                             padding: 0.2vw 0 0.2vw 0;
                         }
@@ -328,9 +336,8 @@
                             display: inline-block;
                             vertical-align: text-top;
                             width: 1vw;
-                            height: 1vw;
+                            height: 100%;
                             box-sizing: border-box;
-                            border: 1px solid black;
                             position: absolute;
                             top: 0;
                             left: 0;

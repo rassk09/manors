@@ -1,4 +1,4 @@
-.container {
+.cont {
     padding-top: 5.8vw;
     font-family: 'Gotham Pro Regular';
     background-color: #f5f8fa;
@@ -10,6 +10,11 @@
         float: left;
         .preview {
             font-size: 1vw;
+            cursor: pointer;
+            transition: 0.25s;
+            &:hover {
+                color: #1078d1;
+            }
         }
         .manor_name {
             font-family: 'Playfair Display', serif;
@@ -73,13 +78,13 @@
                     &:first-child {
                         border-bottom: 1px solid rgba(151, 151, 151, 0.13);
                     }
-                    p {
+                   .cell_text {
                         padding: 0 1vw 0 3.2vw;
-                        &:first-child {
-                            padding-top: 2vw;
-                        }
+                       line-height: normal;
                     }
                     .cell_title {
+                        padding-top: 1vw;
+                        padding-left: 3.2vw;
                         font-weight: bold;
                     }
                 }
@@ -92,7 +97,7 @@
                     position: absolute;
                     background-size: contain;
                     background-position: center center;
-                    top: 2vw;
+                    top: 1vw;
                     left: 0.5vw;
                 }
                 .cell2_ruined:before {
@@ -104,7 +109,7 @@
                     position: absolute;
                     background-size: contain;
                     background-position: center center;
-                    top: 2vw;
+                    top: 1vw;
                     left: 0.5vw;
                 }
                 .cell2_restored:before {
@@ -116,7 +121,7 @@
                     position: absolute;
                     background-size: contain;
                     background-position: center center;
-                    top: 2vw;
+                    top: 1vw;
                     left: 0.5vw;
                 }
                 .cell3:before {
@@ -128,7 +133,7 @@
                     position: absolute;
                     background-size: contain;
                     background-position: center center;
-                    top: 2vw;
+                    top: 1vw;
                     left: 0.5vw;
                 }
                 .cell4:before {
@@ -140,7 +145,7 @@
                     position: absolute;
                     background-size: contain;
                     background-position: center center;
-                    top: 1.8vw;
+                    top: 1vw;
                     left: 0.5vw;
                 }
 
@@ -220,18 +225,18 @@
                     display: block;
                 }
             }
-            #scrollbar_style::-webkit-scrollbar-track
+            .scrollbar_style::-webkit-scrollbar-track
             {
                 -webkit-box-shadow: inset 0 0 6px rgba(220,220,220 ,1 );
                 background-color: #F5F5F5;
             }
 
-            #scrollbar_style::-webkit-scrollbar {
+            .scrollbar_style::-webkit-scrollbar {
                 width: 0.2vw;
                 background-color: #F5F5F5;
             }
 
-            #scrollbar_style::-webkit-scrollbar-thumb {
+            .scrollbar_style::-webkit-scrollbar-thumb {
                 background-color: grey;
 
             }

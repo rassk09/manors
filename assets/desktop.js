@@ -1,31 +1,31 @@
 // import Promise from 'es6-promise-promise'; // нужен^ если используется require.ensure, для ie11-
 import 'babel-polyfill';
 import 'expose-loader?$!expose-loader?jQuery!jquery'; // подключил jquery, что бы он был виден глобально(в том числе из консоли)
-
-//import Swiper from 'swiper';
-
-
- // let isMobile = $('body').hasClass('mobile');
-
+import 'popper.js';
+import 'bootstrap';
+import 'bootstrap-select';
 import Swiper from 'swiper/dist/js/swiper.js';
+
+// let isMobile = $('body').hasClass('mobile');
 
 let gallery = (function () {
     $('.small_photo').click(function () {
         $('.big_photo').css('background-image', 'url(' + $(this).attr('data-image') + ')');
     });
 })(),
+
 manorSearch = (function () {
     $('.list_on').click(function () {
         $('.map_on').removeClass('blue_link');
         $('.list_on').addClass('blue_link');
-        $('.map').removeClass('on');
-        $('.manors').addClass('on');
+        $('.map').removeClass('manor_on');
+        $('.manors').addClass('manor_on');
     });
     $('.map_on').click(function () {
         $('.list_on').removeClass('blue_link');
         $('.map_on').addClass('blue_link');
-        $('.manors').removeClass('on');
-        $('.map').addClass('on');
+        $('.manors').removeClass('manor_on');
+        $('.map').addClass('manor_on');
     });
 })(),
     visibleText = (function () {
@@ -88,4 +88,23 @@ manorSearch = (function () {
         slidesPerView: 4,
         spaceBetween: 5,
     });
-})()
+})(),
+// onePageScroll = (function(){
+//     // if (у меня сейчас окрыта главная страница) {
+//         $('#fullpage').onepage_scroll({
+//             pagination: false,
+//             loop: false,
+//         });
+//     // }
+//
+// })(),
+bootstrapSelect = (function () {
+    $('.selectpicker').selectpicker({
+        width: '20vw',
+        height: '100%',
+        padding: 0,
+        margin: 0,
+        size: 5,
+        container: 'body'
+    });
+})();
