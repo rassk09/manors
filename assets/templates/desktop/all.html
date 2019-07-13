@@ -4,7 +4,7 @@
     <div class="obj">
         <div class="search_body">
             <form class="search_menu">
-                <select class="search_element region_search selectpicker" title="dfg">
+                <select class="search_element region_search selectpicker" title="ОБЛАСТЬ">
                     <option>Mustard</option>
                     <option>Ketchup</option>
                     <option>Barbecue</option>
@@ -14,8 +14,18 @@
                     <option>Barbecue</option>
                     <option>Barbecue</option>
                 </select>
-                <select class="search_element area selectpicker" title="dfg"></select>
-                <input type="search" class="search_element search_input" title="dfg">
+                <select class="search_element area selectpicker" title="РАЙОН">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Barbecue</option>
+                    <option>Barbecue</option>
+                    <option>Barbecue</option>
+                    <option>Barbecue</option>
+                    <option>Barbecue</option>
+                    <option>Barbecue</option>
+                </select>
+                <input type="search" class="search_element search_input" title="Поиск по названию усадьбы" placeholder="Поиск по названию усадьбы">
+                <button class="search_button"></button>
             </form>
             <div class="info_string">
                 <a class="list_on">Списком</a>
@@ -169,10 +179,10 @@
     </div>
 </div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key="></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCTz1qW1tBCO2uKiO8GEhgg2Vv778HUc0&callback=initMap" type="text/javascript"></script>
 <script>
     function initMap() {
-        // Координаты центра на карте. Широта: 56.2928515, Долгота: 43.7866641
+        // Координаты центра на карте. Широта: , Долгота:
         var centerLatLng = new google.maps.LatLng(55.848555, 37.397864);
         // Обязательные опции с которыми будет проинициализированна карта
         var mapOptions = {
@@ -184,9 +194,10 @@
         var marker = new google.maps.Marker({
             position: centerLatLng,              // Координаты расположения маркера. В данном случае координаты нашего маркера совпадают с центром карты, но разумеется нам никто не мешает создать отдельную переменную и туда поместить другие координаты.
             map: map,
-            title: "Светлогорский пр-д, 13, Москва, 125476 "
+            title: ""
         });
     }
-    google.maps.event.addDomListener(window, "load", initMap);
+
 </script>
+
 @@include('templates/desktop/include/footer.html')

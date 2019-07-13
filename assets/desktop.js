@@ -105,6 +105,7 @@ bootstrapSelect = (function () {
         padding: 0,
         margin: 0,
         size: 5,
-        container: 'body'
+        container: 'body',
+        background: '#010d25',
     });
 })();

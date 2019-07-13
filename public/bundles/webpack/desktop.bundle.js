@@ -3164,7 +3164,8 @@ bootstrapSelect = function () {
         padding: 0,
         margin: 0,
         size: 5,
-        container: 'body'
+        container: 'body',
+        background: '#010d25'
     });
 }(); // import Promise from 'es6-promise-promise'; // нужен^ если используется require.ensure, для ie11-
 

@@ -1,12 +1,12 @@
 @import url(css/desktop/_reset.css);
-@import url(../public/node_modules/bootstrap/bootstrap-4.3.1/dist/css/bootstrap.min.css);
+@import url(../public/node_modules/bootstrap/dist/css/bootstrap.min.css);
 @import url(css/desktop/_mixin.css);
 @import url(css/desktop/_default.css);
 
 @import url(../public/node_modules/swiper/dist/css/swiper.css);
 
 
-@import url(../public/node_modules/bootstrap-select/bootstrap-select-1.13.9/dist/css/bootstrap-select.min.css);
+@import url(../public/node_modules/bootstrap-select/dist/css/bootstrap-select.min.css);
 /*@import url(../public/node_modules/onepage-scroll-master/onepage-scroll.css);*/
 
 
