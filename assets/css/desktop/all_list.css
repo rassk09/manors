@@ -315,6 +315,14 @@
             height: 44.6vw;
             background-color: gainsboro;
             display: none;
+            .gm-style-iw, .gm-style-iw-c {
+                border-radius: 0;
+                padding: 0;
+                height: 4.4vw;
+                button {
+                    display: none;
+                }
+            }
         }
         .manor_on {
             display: block;
@@ -451,4 +459,6 @@
     }
 }
 
-
+.gm-style-iw, .gm-style-iw-c {
+    border-radius: 0;
+}
