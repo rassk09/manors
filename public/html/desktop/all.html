@@ -212,14 +212,6 @@
 <script>
 
     function initMap() {
-        var contentString = '<div id="content" style="height: 100%">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<div id="bodyContent" style="clear: fix;">'+
-            '<div id="manorCard" style="float: left"><img src="/images/desktop/pic1.png" style="width: 7vw; height: 4.4vw" ></div>'+
-            '<div id="manorName" style="float: left; width: 12vw; height: 4.4vw; font-family: \'Gotham Pro Bold\'; font-size: 0,8vw; line-height: 4.4vw; text-align: center; font-weight: bold ">Усадьба Кампанари</div>'+
-            '</div>'+
-            '</div>';
 
         // Координаты центра на карте. Широта: , Долгота:
         // var centerLatLng = new google.maps.LatLng(54.244419, 38.436857);
@@ -248,14 +240,30 @@
 
 
         var locations = [
-            [contentString, 54.244419, 38.436857, 1],
-            [contentString, 54.244422, 38.436857, 2],
-            [contentString, 54.244419, 38.436850, 3],
-            [contentString, 54.244519, 38.436857, 4],
-            [contentString, 54.244419, 38.438857, 5],
-            [contentString, 54.244419, 38.436857, 6],
-            [contentString, 54.234419, 38.486857, 7],
-            [contentString, 54.255419, 38.436457, 8]
+            ['<div id="content" style="height: 100%">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<div id="bodyContent" style="clear: fix;">'+
+            '<div id="manorCard" style="float: left"><img src="/images/desktop/pic1.png" style="width: 7vw; height: 4.4vw" ></div>'+
+            '<div id="manorName" style="float: left; width: 12vw; height: 4.4vw; font-family: \'Gotham Pro Bold\'; font-size: 0,8vw; line-height: 4.4vw; text-align: center; font-weight: bold ">Усадьба Кампанари 1</div>'+
+            '</div>'+
+            '</div>', 53.244419, 38.436857, 1],
+            ['<div id="content" style="height: 100%">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<div id="bodyContent" style="clear: fix;">'+
+            '<div id="manorCard" style="float: left"><img src="/images/desktop/pic1.png" style="width: 7vw; height: 4.4vw" ></div>'+
+            '<div id="manorName" style="float: left; width: 12vw; height: 4.4vw; font-family: \'Gotham Pro Bold\'; font-size: 0,8vw; line-height: 4.4vw; text-align: center; font-weight: bold ">Усадьба Кампанари 2</div>'+
+            '</div>'+
+            '</div>', 54.244422, 38.436857, 2],
+            ['<div id="content" style="height: 100%">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<div id="bodyContent" style="clear: fix;">'+
+            '<div id="manorCard" style="float: left"><img src="/images/desktop/pic1.png" style="width: 7vw; height: 4.4vw" ></div>'+
+            '<div id="manorName" style="float: left; width: 12vw; height: 4.4vw; font-family: \'Gotham Pro Bold\'; font-size: 0,8vw; line-height: 4.4vw; text-align: center; font-weight: bold ">Усадьба Кампанари 3</div>'+
+            '</div>'+
+            '</div>', 52.244419, 38.436850, 3],
         ];
 
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -268,10 +276,24 @@
 
         var marker, i;
 
+        var markerStyles = {
+            'restored': {
+                url: '/images/desktop/address-blue.png',
+                scaledSize: new google.maps.Size(28, 38),
+                anchor: new google.maps.Point(15, 48)
+            },
+            'ruined': {
+                url: '/images/desktop/address-grey.png',
+                scaledSize: new google.maps.Size(28, 38),
+                anchor: new google.maps.Point(15, 48)
+            }
+        };
+
         for (i = 0; i < locations.length; i++) {
             marker = new google.maps.Marker({
                 position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                map: map
+                map: map,
+                icon: markerStyles['restored'],
             });
 
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
@@ -281,7 +303,6 @@
                 }
             })(marker, i));
         }
-
 
     }
 
