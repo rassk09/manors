@@ -4,6 +4,7 @@ import 'expose-loader?$!expose-loader?jQuery!jquery'; // подключил jque
 import 'popper.js';
 import 'bootstrap';
 import 'bootstrap-select';
+import 'onepage-scroll-master/jquery.onepage-scroll.min';
 import Swiper from 'swiper/dist/js/swiper.js';
 
 // let isMobile = $('body').hasClass('mobile');
@@ -89,15 +90,12 @@ manorSearch = (function () {
         spaceBetween: 5,
     });
 })(),
-// onePageScroll = (function(){
-//     // if (у меня сейчас окрыта главная страница) {
-//         $('#fullpage').onepage_scroll({
-//             pagination: false,
-//             loop: false,
-//         });
-//     // }
-//
-// })(),
+onePageScroll = (function(){
+    $('#fullpage').onepage_scroll({
+        pagination: false,
+        loop: false,
+    });
+})(),
 bootstrapSelect = (function () {
     $('.selectpicker').selectpicker({
         width: '20vw',

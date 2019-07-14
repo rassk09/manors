@@ -9,10 +9,7 @@
         <!-- fonts -->
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=cyrillic" rel="stylesheet">
         <link href="/bundles/css/desktop.min.css" rel="stylesheet">
-        <!--<link href="/fullPage.js-master/fullPage.js-master/dist/fullpage.min.css" rel="stylesheet">-->
-        <!--<link href="/bootstrap-select-1.13.9/bootstrap-select-1.13.9/dist/css/bootstrap-select.min.css" rel="stylesheet">-->
-        <!--<link href="/bootstrap-4.3.1/dist/css/bootstrap.min.css" rel="stylesheet">-->
-        <!--<link href="/onepage-scroll-master/onepage-scroll.css" rel="stylesheet">-->
+
 
     </head>
 <body>
@@ -220,31 +217,71 @@
             '</div>'+
             '<div id="bodyContent" style="clear: fix;">'+
             '<div id="manorCard" style="float: left"><img src="/images/desktop/pic1.png" style="width: 7vw; height: 4.4vw" ></div>'+
-            '<div id="manorName" style="float: left; width: 12vw; height: 4.4vw; font-family: \'Gotham Pro Bold\'; font-size: 1vw; line-height: 4.4vw; text-align: center; font-weight: bold ">Усадьба Кампанари</div>'+
+            '<div id="manorName" style="float: left; width: 12vw; height: 4.4vw; font-family: \'Gotham Pro Bold\'; font-size: 0,8vw; line-height: 4.4vw; text-align: center; font-weight: bold ">Усадьба Кампанари</div>'+
             '</div>'+
             '</div>';
+
         // Координаты центра на карте. Широта: , Долгота:
-        var centerLatLng = new google.maps.LatLng(54.244419, 38.436857);
-        // Обязательные опции с которыми будет проинициализирована карта
-        var mapOptions = {
-            center: centerLatLng, // Координаты центра мы берем из переменной centerLatLng
-            zoom: 16,// Зум по умолчанию. Возможные значения от 0 до 21
-            disableDefaultUI: true
-        };
-        // Создаем карту внутри элемента #map
-        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-        var marker = new google.maps.Marker({
-            position: centerLatLng,              // Координаты расположения маркера. В данном случае координаты нашего маркера совпадают с центром карты, но разумеется нам никто не мешает создать отдельную переменную и туда поместить другие координаты.
-            map: map,
-            title: "Усадьба Кампанари",
+        // var centerLatLng = new google.maps.LatLng(54.244419, 38.436857);
+        // // Обязательные опции с которыми будет проинициализирована карта
+        // var mapOptions = {
+        //     center: centerLatLng, // Координаты центра мы берем из переменной centerLatLng
+        //     zoom: 10,// Зум по умолчанию. Возможные значения от 0 до 21
+        //     mapTypeId: google.maps.MapTypeId.ROADMAP
+        // };
+        //
+        //
+        // // Создаем карту внутри элемента #map
+        // var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        // var marker = new google.maps.Marker({
+        //     position: centerLatLng,              // Координаты расположения маркера. В данном случае координаты нашего маркера совпадают с центром карты, но разумеется нам никто не мешает создать отдельную переменную и туда поместить другие координаты.
+        //     map: map,
+        //     title: "Усадьба Кампанари",
+        // });
+        // var infowindow = new google.maps.InfoWindow({
+        //     content: contentString,
+        // });
+        //
+        // marker.addListener('click', function() {
+        //     infowindow.open(map, marker);
+        // });
+
+
+        var locations = [
+            [contentString, 54.244419, 38.436857, 1],
+            [contentString, 54.244422, 38.436857, 2],
+            [contentString, 54.244419, 38.436850, 3],
+            [contentString, 54.244519, 38.436857, 4],
+            [contentString, 54.244419, 38.438857, 5],
+            [contentString, 54.244419, 38.436857, 6],
+            [contentString, 54.234419, 38.486857, 7],
+            [contentString, 54.255419, 38.436457, 8]
+        ];
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: new google.maps.LatLng(54.244419, 38.436857),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
         });
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString,
-            maxWidth: 400
-        });
-        marker.addListener('click', function() {
-            infowindow.open(map, marker);
-        });
+
+        var infowindow = new google.maps.InfoWindow();
+
+        var marker, i;
+
+        for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map
+            });
+
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(locations[i][0]);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        }
+
 
     }
 

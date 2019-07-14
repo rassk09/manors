@@ -34,6 +34,7 @@
                     border: none;
                     font-family: 'Gotham Pro Light';
                     padding-left: 2vw;
+                    color: #9b9b9b;
                 }
                 .search_button {
                     width: 4vw;
@@ -85,6 +86,7 @@
                         background-color: #010d25;
                         font-family: 'Playfair Display', serif;
                         font-size: 1vw;
+                        line-height: 3.3vw;
                         outline: none;
                         border-radius: 0;
                         border-top: none;
@@ -126,6 +128,7 @@
             .info_string {
                 height: 4vw;
                 clear: fix;
+                box-shadow: 0.2vw 0 0 #f5f8fa;
                 a {
                     display: block;
                     color: #9b9b9b;

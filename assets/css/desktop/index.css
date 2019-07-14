@@ -87,7 +87,7 @@
         }
     }
 }
-.about {
+.about_screen {
     @mixin io back2-2x, jpg;
     font-family: 'Playfair Display', serif;
     background-size: cover;

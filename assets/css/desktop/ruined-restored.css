@@ -2,6 +2,8 @@
     padding-top: 5.8vw;
     font-family: 'Gotham Pro Regular';
     background-color: #f5f8fa;
+    background-size: 100%;
+    background-position: center center;
     height: 100%;
     clear: fix;
     .left {
