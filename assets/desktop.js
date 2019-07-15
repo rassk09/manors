@@ -28,6 +28,12 @@ manorSearch = (function () {
         $('.manors').removeClass('manor_on');
         $('.map').addClass('manor_on');
     });
+    $('.manor_address').click(function () {
+        $('.list_on').removeClass('blue_link');
+        $('.map_on').addClass('blue_link');
+        $('.manors').removeClass('manor_on');
+        $('.map').addClass('manor_on');
+    });
 })(),
     visibleText = (function () {
         $('.first_item').click(function () {
@@ -121,10 +127,5 @@ ruinedRestoredMap = (function () {
 
         $('.map_alone').removeClass('showItem');
         $('.gallery').addClass('showItem');
-    });
-})(),
-likeActive = (function () {
-    $('.like').click(function () {
-        $('.like').toggleClass('like_active');
     });
 })();

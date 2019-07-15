@@ -3087,6 +3087,12 @@ var gallery = function () {
         $('.manors').removeClass('manor_on');
         $('.map').addClass('manor_on');
     });
+    $('.manor_address').click(function () {
+        $('.list_on').removeClass('blue_link');
+        $('.map_on').addClass('blue_link');
+        $('.manors').removeClass('manor_on');
+        $('.map').addClass('manor_on');
+    });
 }(),
     visibleText = function () {
     $('.first_item').click(function () {
@@ -3180,11 +3186,6 @@ var gallery = function () {
 
         $('.map_alone').removeClass('showItem');
         $('.gallery').addClass('showItem');
-    });
-}(),
-    likeActive = function () {
-    $('.like').click(function () {
-        $('.like').toggleClass('like_active');
     });
 }(); // подключил jquery, что бы он был виден глобально(в том числе из консоли)
 

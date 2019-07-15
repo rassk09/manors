@@ -260,23 +260,40 @@
                         position: relative;
                     }
                     .like {
-                        @mixin io heart-not-filled, svg;
-                        display: block;
-                        width: 2.8vw;
-                        height: 2.8vw;
-                        background-position: center;
-                        background-size: 60%;
-                        background-color: #010d25;
-                        cursor: pointer;
-                    }
-                    .like_active {
-                        @mixin io heart-filled, svg;
-                        display: block;
-                        width: 2.8vw;
-                        height: 2.8vw;
-                        background-position: center;
-                        background-size: 60%;
-                        background-color: #010d25;
+                        .styled-check {
+                            position: absolute;
+                            opacity: 0;
+                            & + label {
+                                position: relative;
+                                cursor: pointer;
+                                padding: 0;
+                            }
+                            & + label:before {
+                                @mixin io heart-not-filled, svg;
+                                background-size: 60%;
+                                background-position: center center;
+                                content: '';
+                                margin-right: 0.7vw;
+                                display: inline-block;
+                                vertical-align: text-top;
+                                width: 2.8vw;
+                                height: 2.8vw;
+                                background-color: #010d25;
+                            }
+                            &:checked + label:after {
+                                @mixin io heart-filled, svg;
+                                background-size: 60%;
+                                content: '';
+                                display: inline-block;
+                                vertical-align: text-top;
+                                width: 2.8vw;
+                                height: 2.8vw;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                background-position: center center;
+                            }
+                        }
                     }
                     .ruined {
                         @mixin io ruins, svg;
@@ -311,6 +328,8 @@
                         padding: 1vw 0 0 3.3vw;
                         font-size: 0.8vw;
                         position: relative;
+                        cursor: pointer;
+                        transition: 0.25s;
                         &:before {
                             @mixin io address, svg;
                             background-position: center;
@@ -322,6 +341,9 @@
                             position: absolute;
                             top: 1.5vw;
                             left: 1.2vw;
+                        }
+                        &:hover {
+                            opacity: 0.7;
                         }
                     }
                 }
