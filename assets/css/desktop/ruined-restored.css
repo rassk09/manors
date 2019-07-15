@@ -32,7 +32,7 @@
             width: 37vw;
             /*height: 18.4vw;*/
             box-shadow: 0vw 0.3vw 0.5vw rgba(0,0,0,0.15);
-            padding: 0 0 1vw;
+            padding: 0 ;
             .card_header {
                 clear: fix;
                 padding: 2.3vw 2.4vw 1vw;
@@ -50,6 +50,8 @@
                     text-transform: uppercase;
                     float: right;
                     position: relative;
+                    display: none;
+                    cursor: pointer;
                     &:before {
                         @mixin io return-to-map, svg;
                         content: '';
@@ -62,6 +64,31 @@
                         top: -0.5vw;
                         left: -2vw;
                     }
+                }
+                .show_photo {
+                    color: #1078d1;
+                    font-size: 0.8vw;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    float: right;
+                    position: relative;
+                    display: none;
+                    cursor: pointer;
+                    &:before {
+                        @mixin io list, svg;
+                        content: '';
+                        display: block;
+                        width: 1.3vw;
+                        height: 1.3vw;
+                        background-position: center center;
+                        background-size: contain;
+                        position: absolute;
+                        top: -0.3vw;
+                        left: -2vw;
+                    }
+                }
+                .show_on {
+                    display: block;
                 }
             }
         }
@@ -187,15 +214,7 @@
                 overflow-y: scroll;
                 overflow-x: hidden;
                 position: relative;
-                &:after {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    bottom: 0;
-                    width: 37vw;
-                    height: 7.2vw;
-                    background-image: linear-gradient(to top, #f5f8fa, rgba(255, 255, 255, 0));
-                }
+
                 .first_text {
                     display: none;
                     font-size: 1vw;
@@ -271,6 +290,8 @@
         width: 54vw;
         float: left;
         .gallery {
+            width: 54vw;
+            display: none;
             .big_photo {
                 width: 54vw;
                 height: 38.7vw;
@@ -291,5 +312,18 @@
                 }
             }
         }
+        .map_alone {
+            width: 54vw;
+            height: 38.7vw;
+            float: left;
+            display: none;
+            background-color: gainsboro;
+        }
+        .showItem {
+            display: block;
+        }
+
     }
+
+
 }

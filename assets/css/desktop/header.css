@@ -4,9 +4,13 @@ header {
     font-family: 'Playfair Display', serif;
     position: fixed;
     z-index: 100;
+    background-color: #ffffff;
     .menu {
+        width: 85vw;
         height: 5.8vw;
-        padding-left: 4.8vw;
+        /*padding-left: 4.8vw;*/
+        display: block;
+        margin: 0 auto;
         clear: fix;
         background-color: #ffffff;
         text-transform: uppercase;
@@ -15,7 +19,7 @@ header {
                 font-family: 'Playfair Display', serif;
                 float: left;
                 padding: 2.4vw 2vw;
-                font-size: 1vw;
+                font-size: 0.9vw;
                 cursor: pointer;
                 line-height: 1vw;
                 transition: 0.25s;

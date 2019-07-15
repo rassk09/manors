@@ -2,7 +2,7 @@
     clear: fix;
     .obj {
         width: 75.6vw;
-        margin-left: 3vw;
+        margin-left: 2.6vw;
         float: left;
         .search_body {
             position: fixed;
@@ -12,7 +12,29 @@
             .search_menu {
                 background-color: #010d25;
                 width: 75.6vw;
+
                 position: relative;
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 2vw;
+                    height: 4.2vw;
+                    background-color: #f5f8fa;
+                    top: 0;
+                    left: -2vw;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 2vw;
+                    height: 4.2vw;
+                    background-color: #f5f8fa;
+                    top: 0;
+                    right: -2vw;
+                }
+
                 .search_element {
                     height: 3.9vw;
                     padding: 0;
@@ -35,6 +57,7 @@
                     font-family: 'Gotham Pro Light';
                     padding-left: 2vw;
                     color: #9b9b9b;
+                    font-size: 0.9vw;
                 }
                 .search_button {
                     width: 4vw;
@@ -128,7 +151,20 @@
             .info_string {
                 height: 4vw;
                 clear: fix;
-                box-shadow: 0.2vw 0 0 #f5f8fa;
+                box-shadow: 0.5vw 0 0 #f5f8fa;
+                display: block;
+                position: relative;
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 2vw;
+                    height: 4vw;
+                    position: absolute;
+                    top: 0;
+                    left: -2vw;
+                    background-color: #f5f8fa;
+
+                }
                 a {
                     display: block;
                     color: #9b9b9b;
@@ -231,6 +267,7 @@
                         background-position: center;
                         background-size: 60%;
                         background-color: #010d25;
+                        cursor: pointer;
                     }
                     .like_active {
                         @mixin io heart-filled, svg;
@@ -336,13 +373,13 @@
         width: 20vw;
         position: relative;
         .filter {
-            width: 17.4vw;
+            width: 17vw;
             background-color: white;
             position: fixed;
             top: 13.8vw;
-            right: 2vw;
+            right: 2.6vw;
             .filter_header {
-                width: 17.4vw;
+                width: 17vw;
                 height: 3.5vw;
                 background-color: #f3cb8e;
                 position: relative;
@@ -357,7 +394,7 @@
                     position: absolute;
                 }
                 .filter_title {
-                    width: 14vw;
+                    width: 13.6vw;
                     height: 3.5vw;
                     text-align: center;
                     display: block;

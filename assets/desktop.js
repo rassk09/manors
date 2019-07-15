@@ -93,7 +93,7 @@ manorSearch = (function () {
 onePageScroll = (function(){
     $('#fullpage').onepage_scroll({
         pagination: false,
-        loop: false,
+        loop: false
     });
 })(),
 bootstrapSelect = (function () {
@@ -105,5 +105,26 @@ bootstrapSelect = (function () {
         size: 5,
         container: 'body',
         background: '#010d25',
+    });
+})(),
+ruinedRestoredMap = (function () {
+    $('.show_map').click(function () {
+        $('.show_map').removeClass('show_on');
+        $('.show_photo').addClass('show_on');
+
+        $('.gallery').removeClass('showItem');
+        $('.map_alone').addClass('showItem');
+    });
+    $('.show_photo').click(function () {
+        $('.show_photo').removeClass('show_on');
+        $('.show_map').addClass('show_on');
+
+        $('.map_alone').removeClass('showItem');
+        $('.gallery').addClass('showItem');
+    });
+})(),
+likeActive = (function () {
+    $('.like').click(function () {
+        $('.like').toggleClass('like_active');
     });
 })();

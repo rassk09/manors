@@ -8,7 +8,8 @@
             <div class="manor_card">
                 <div class="card_header">
                     <div class="number">Реестровый №1233456</div>
-                    <a class="show_map">смотреть на карте</a>
+                    <div class="show_map show_on">смотреть на карте</div>
+                    <div class="show_photo">смотреть фотографии</div>
                 </div>
                 <div class="table">
                     <div class="col col_left">
@@ -76,10 +77,10 @@
                 </div>
             </div>
         </div>
-        <a class="blue_button">Подробнее</a>
+        <!--<a class="blue_button">Подробнее</a>-->
     </div>
     <div class="right">
-        <div class="gallery">
+        <div class="gallery showItem">
             <div class="big_photo" style="background-image: url(/images/desktop/pic1.png)"></div>
             <div class="swiper-container">
                 <ul class="small_box swiper-wrapper">
@@ -91,7 +92,15 @@
                 </ul>
             </div>
         </div>
+        <div class="map_alone" id="ruinedMap"></div>
     </div>
 </section>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRxQ9aI2SINBklhAOPXHlMdW_Yl7iE_6U&callback=initMap" type="text/javascript"></script>
+
+<script>
+    
+</script>
+
 
 @@include('templates/desktop/include/footer.html')
