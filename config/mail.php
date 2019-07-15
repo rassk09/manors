@@ -12,7 +12,7 @@ return [
     | your application here. By default, Laravel is setup for SMTP mail.
     |
     | Supported: "smtp", "sendmail", "mailgun", "mandrill", "ses",
-    |            "sparkpost", "postmark", "log", "array"
+    |            "sparkpost", "log", "array"
     |
     */
 
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'no-reply@lifestyle.expert'),
+        'name' => env('MAIL_FROM_NAME', 'Oriflame')
     ],
 
     /*
@@ -132,5 +132,18 @@ return [
     */
 
     'log_channel' => env('MAIL_LOG_CHANNEL'),
+
+    /* Fallback settings */
+    'fallback' => [
+        'host' => 'smtp-pulse.com',
+        'port' => 465,
+        'encryption' => 'SSL',
+        'username' => 'kostya@w-not.ru',
+        'password' => 'PAqDM6omHFnATDf',
+        'from' => [
+            'address' => 'no-reply@lifestyle.expert',
+            'name' => 'Oriflame'
+        ],
+    ]
 
 ];

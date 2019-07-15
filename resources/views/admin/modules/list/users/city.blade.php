@@ -1,0 +1,1 @@
+{!! $item->city ? $item->city->name : '' !!}

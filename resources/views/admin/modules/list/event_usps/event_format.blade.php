@@ -1,0 +1,1 @@
+{!! $item->format ? $item->format->name : '' !!}

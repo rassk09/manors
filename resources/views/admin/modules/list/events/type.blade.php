@@ -1,0 +1,1 @@
+{!! $item->type ? $item->type->name : '' !!}

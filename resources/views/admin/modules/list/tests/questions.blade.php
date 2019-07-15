@@ -1,0 +1,1 @@
+{!! $item->questions ? $item->questions->count() : '' !!}

@@ -1,0 +1,1 @@
+<a href="{!! $item->file !!}" class="btn btn-xs btn-success" target="_blank"><i class="fa fa-download fa-sm m-r-5"></i> Скачать</a>

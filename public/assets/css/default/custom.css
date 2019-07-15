@@ -1,0 +1,192 @@
+@font-face {
+    font-family: "Gotham Pro";
+    font-weight: 400;
+    src: url(/fonts/GothamPro.woff?v161ad467f70) format('woff'),
+         url(/fonts/GothamPro.ttf?v161ad467f70) format('truetype')
+}
+
+@font-face {
+    font-family: "Gotham Pro";
+    font-weight: 700;
+    src: url(/fonts/GothamPro-Bold.woff?v160addd6d50) format('woff'),
+         url(/fonts/GothamPro-Bold.ttf?v160addd6d50) format('truetype')
+}
+
+body {
+    font-family: 'Gotham Pro', 'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.login-cover-bg {
+    background: rgba(0, 0, 0, .65);
+}
+
+.header .navbar-logo {
+    background: url('/assets/img/custom/logo.png');
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    position: relative;
+    top: -6px;
+}
+
+.letter {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background: #b6c2c9 !important;
+    color: #FFFFFF !important;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+.letter.letter-A {
+    background: #727cb6 !important;
+    color: #FFFFFF !important;
+}
+.letter.letter-B {
+    background: #348fe2 !important;
+    color: #FFFFFF !important;
+}
+.letter.letter-C {
+    background: #49b6d6;
+    color: #FFFFFF !important;
+}
+.letter.letter-D {
+    background: #2d353c;
+    color: #FFFFFF !important;
+}
+.letter.letter-E {
+    background: #ffd900;
+    color: #000000 !important;
+}
+.letter.letter-F {
+    background: #f59c1a;
+    color: #ffffff !important;
+}
+.letter.letter-G {
+    background: #ff5b57;
+    color: #ffffff !important;
+}
+.letter.letter-H {
+    background: #00acac;
+    color: #ffffff !important;
+}
+.letter.letter-I {
+    background: #90ca4b;
+    color: #ffffff !important;
+}
+.letter.letter-J {
+    background: #727cb6 !important;
+    color: #FFFFFF !important;
+}
+.letter.letter-K {
+    background: #348fe2 !important;
+    color: #FFFFFF !important;
+}
+.letter.letter-L {
+    background: #49b6d6;
+    color: #FFFFFF !important;
+}
+.letter.letter-M {
+    background: #2d353c;
+    color: #FFFFFF !important;
+}
+.letter.letter-N {
+    background: #ffd900;
+    color: #000000 !important;
+}
+.letter.letter-O {
+    background: #f59c1a;
+    color: #ffffff !important;
+}
+.letter.letter-P {
+    background: #ff5b57;
+    color: #ffffff !important;
+}
+.letter.letter-Q {
+    background: #00acac;
+    color: #ffffff !important;
+}
+.letter.letter-R {
+    background: #90ca4b;
+    color: #ffffff !important;
+}
+.letter.letter-S {
+    background: #727cb6 !important;
+    color: #FFFFFF !important;
+}
+.letter.letter-T {
+    background: #348fe2 !important;
+    color: #FFFFFF !important;
+}
+.letter.letter-U {
+    background: #49b6d6;
+    color: #FFFFFF !important;
+}
+.letter.letter-V {
+    background: #2d353c;
+    color: #FFFFFF !important;
+}
+.letter.letter-W {
+    background: #ffd900;
+    color: #000000 !important;
+}
+.letter.letter-X {
+    background: #f59c1a;
+    color: #ffffff !important;
+}
+.letter.letter-Y {
+    background: #ff5b57;
+    color: #ffffff !important;
+}
+.letter.letter-Z {
+    background: #00acac;
+    color: #ffffff !important;
+}
+
+.header .navbar-user .letter {
+    float: left;
+    margin: -5px 10px -5px 0;
+}
+
+.card table .checkbox.checkbox-css {
+    padding-top: 0;
+    width: 16px;
+}
+
+.card table .checkbox.checkbox-css input:checked+label:after,
+.card table .checkbox.checkbox-css label:before {
+    top: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+.card-buttons-tr {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+}
+
+#jsAddMaterial div.dropdown-menu.open{
+    max-height: 314px !important;
+    overflow: hidden;
+}
+#jsAddMaterial ul.dropdown-menu.inner{
+    max-height: 260px !important;
+    overflow-y: auto;
+}
+
+.row_hidden {
+    color: #cccccc;
+}
+
+.row_hidden a {
+    color: #b8d1e8;
+}

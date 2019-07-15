@@ -1,0 +1,1 @@
+{!! $item->members_join ? $item->members_join->count() : 0 !!}

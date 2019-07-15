@@ -1,0 +1,29 @@
+.drop-area, .drop-area-static {
+    border: 2px dashed #b6c2c9;
+    padding: 45px 20px;
+}
+.drop-area.highlight {
+    border-color: #00acac;
+}
+.drop-area p {
+    margin-top: 0;
+}
+.drop-area .my-form {
+    margin-bottom: 10px;
+}
+.drop-area .my-form label {
+    cursor: pointer;
+}
+.drop-area .my-form label:hover b {
+    color: #00acac;
+}
+.drop-area #gallery img,
+.drop-area-static #gallery img {
+    display: block;
+    margin: -20px auto 0;
+    width: 150px;
+    vertical-align: middle;
+}
+.drop-area input[type="file"] {
+    display: none;
+}
