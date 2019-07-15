@@ -100,7 +100,7 @@ manorSearch = (function () {
 onePageScroll = (function(){
     $('#fullpage').onepage_scroll({
         sectionContainer: "section",
-        
+
         pagination: false,
         loop: false,
         updateURL: false,
@@ -116,6 +116,9 @@ bootstrapSelect = (function () {
         size: 5,
         container: 'body',
         background: '#010d25',
+    });
+    $("#down_btn").click(function () {
+        $(".main"). moveDown ();
     });
 })(),
 ruinedRestoredMap = (function () {

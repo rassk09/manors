@@ -3175,6 +3175,9 @@ var gallery = function () {
         container: 'body',
         background: '#010d25'
     });
+    $("#down_btn").click(function () {
+        $(".main").moveDown();
+    });
 }(),
     ruinedRestoredMap = function () {
     $('.show_map').click(function () {
