@@ -34,6 +34,7 @@ manorSearch = (function () {
         $('.manors').removeClass('manor_on');
         $('.map').addClass('manor_on');
     });
+    
 })(),
     visibleText = (function () {
         $('.first_item').click(function () {
