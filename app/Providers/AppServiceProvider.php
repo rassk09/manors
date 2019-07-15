@@ -28,9 +28,10 @@ class AppServiceProvider extends ServiceProvider
             return '<?php $__env->stopPush(); endif; ?>';
         });
 
-        Blade::directive('lang', function ($expression) {
-            return "<?php echo __k({$expression}); ?>";
-        });
+//        Blade::directive('lang', function ($expression) {
+/*            return "<?php echo __k({$expression}); ?>";*/
+//        });
+
     }
 
     /**

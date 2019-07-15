@@ -156,6 +156,13 @@ class Manor extends BaseModel
                 ->setTooltipText()
                 ->hideSaveButton()
                 ->hideListButton(),
+
+            Action::button('texts', function($item){})
+                ->setCSSClass('info')
+                ->setIcon('list')
+                ->setTooltip('Тексты')
+                ->hideSaveButton()
+                ->hideListButton(),
         ]);
     }
 

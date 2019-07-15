@@ -51,7 +51,7 @@ class CreateDb extends Migration
             $table->timestamps();
         });
 
-        Schema::create('manors_text', function (Blueprint $table) {
+        Schema::create('manors_texts', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('manor_id')->nullable();
             $table->string('title')->nullable();
@@ -114,7 +114,7 @@ class CreateDb extends Migration
 
         Schema::dropIfExists('manors');
         Schema::dropIfExists('manors_photos');
-        Schema::dropIfExists('manors_text');
+        Schema::dropIfExists('manors_texts');
         Schema::dropIfExists('privacy_types');
         Schema::dropIfExists('state_types');
         Schema::dropIfExists('owners');
