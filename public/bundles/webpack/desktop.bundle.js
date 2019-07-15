@@ -3158,6 +3158,7 @@ var gallery = function () {
     onePageScroll = function () {
     $('#fullpage').onepage_scroll({
         sectionContainer: "section",
+
         pagination: false,
         loop: false,
         updateURL: false,
