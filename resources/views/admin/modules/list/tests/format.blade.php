@@ -1,1 +1,0 @@
-{!! $item->test_format_id ? $item->getFormat() : '' !!}

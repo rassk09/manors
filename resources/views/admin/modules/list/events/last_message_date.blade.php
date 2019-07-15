@@ -1,1 +1,0 @@
-{!! $item->publicate_date ? $item->publicate_date->created_at : '' !!}

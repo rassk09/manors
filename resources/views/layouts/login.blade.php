@@ -19,8 +19,8 @@
     <link href="/assets/plugins/animate/animate.min.css?v=53d7dfb5f5742dd7d052e4036dcc077d" rel="stylesheet" />
     <link href="/assets/css/default/style.min.css?v=b47d387cdd8ab7b1f5ccd9deeee1face" rel="stylesheet" />
     <link href="/assets/css/default/style-responsive.min.css?v=959bba567bb4e4c78cafb84655564895" rel="stylesheet" />
-    <link href="/assets/css/default/theme/blue.css?v=b7d6acd33c8a31cc870463b814a33604" rel="stylesheet" id="theme" />
-    <link href="/assets/css/default/custom.css?v=49df35ee0d2f9f7a3272a92bea2c4797" rel="stylesheet" id="theme" />
+    <link href="/assets/css/default/theme/blue.css?v=c29787db3b5572e55075f3efaeafaa89" rel="stylesheet" id="theme" />
+    <link href="/assets/css/default/custom.css?v=2b259ce4c40a09221341c3dbe6ce7237" rel="stylesheet" id="theme" />
     <!-- ================== END BASE CSS STYLE ================== -->
 
     <!-- ================== BEGIN BASE JS ================== -->
@@ -33,7 +33,7 @@
 <!-- end #page-loader -->
 
 <div class="login-cover">
-    <div class="login-cover-image" style="background-image: url(/images/desktop/back2x.jpg)" data-id="login-cover-image"></div>
+    <div class="login-cover-image" style="background-image: url(/images/desktop/back2x.jpg?v=2ab7009a15c88e9018d1e04efc330d41)" data-id="login-cover-image"></div>
     <div class="login-cover-bg"></div>
 </div>
 <!-- begin #page-container -->

@@ -1,1 +1,0 @@
-{!! $item->results ? $item->results->count() : '' !!}

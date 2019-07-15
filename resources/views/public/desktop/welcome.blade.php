@@ -30,8 +30,8 @@
                     своих интересов и заботы о национальном достоянии.
                 </p>
                 <div class="button_block">
-                    <a href="{{ route('map') }}" class="button black_btn">Заброшенные усадьбы</a>
-                    <a href="{{ route('map') }}" class="button blue_btn">Возрожденные усадьбы</a>
+                    <a href="{{ route('map', ['type' => 0]) }}" class="button black_btn">Заброшенные усадьбы</a>
+                    <a href="{{ route('map', ['type' => 1]) }}" class="button blue_btn">Возрожденные усадьбы</a>
                 </div>
                 <a href="{{ route('map') }}" class="more">Смотреть все объекты</a>
             </div>

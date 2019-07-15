@@ -25,10 +25,10 @@
 
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link href="/bundles/css/desktop.min.css" rel="stylesheet">
+    <link href="/bundles/css/desktop.min.css?v=1ca3e7c24b38f57c0243899f3342e103" rel="stylesheet">
 
     @if ($__route->getName() == 'home')
-        <link href="/node_modules/onepage-scroll-master/onepage-scroll.css" rel="stylesheet">
+        <link href="/node_modules/onepage-scroll-master/onepage-scroll.css?v=3626eded73eb1a7139149fb86d69065a" rel="stylesheet">
     @endif
 
 
@@ -48,8 +48,8 @@
 
 @yield('content')
 
-<script src="/bundles/webpack/vendor.bundle.js"></script>
-<script src="/bundles/webpack/desktop.bundle.js"></script>
+<script src="/bundles/webpack/vendor.bundle.js?v=d384c6b7b9fc22087b6a52bd500992ca"></script>
+<script src="/bundles/webpack/desktop.bundle.js?v=e7dada8c76535472acad9bb52e565ad8"></script>
 
 @yield('js')
 

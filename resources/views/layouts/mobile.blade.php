@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oranienbaum|PT+Serif|Roboto&amp;subset=cyrillic" rel="stylesheet">
     <style>@font-face{font-family:"Gill Sans for Oriflame";font-weight:300;src:url(/fonts/GillSans_for_Oriflame/GillSans_for_Oriflame_Light.woff?v16084828b20) format('woff'),url(/fonts/GillSans_for_Oriflame/GillSans_for_Oriflame_Light.ttf?v16084828b20) format('truetype')}@font-face{font-family:"Gill Sans for Oriflame";font-weight:300;font-style:italic;src:url(/fonts/GillSans_for_Oriflame/GillSans_for_Oriflame_LightItalic.woff?v16126fb8fa0) format('woff'),url(/fonts/GillSans_for_Oriflame/GillSans_for_Oriflame_LightItalic.ttf?v15ea6d0dee0) format('truetype')}@font-face{font-family:"Gill Sans for Oriflame";font-weight:400;src:url(/fonts/GillSans_for_Oriflame/GillSans_for_Oriflame_Regular.woff?v16084828350) format('woff'),url(/fonts/GillSans_for_Oriflame/GillSans_for_Oriflame_Regular.ttf?v16084828350) format('truetype')}@font-face{font-family:"Gill Sans for Oriflame";font-weight:700;src:url(/fonts/GillSans_for_Oriflame/GillSans_for_Oriflame_Bold.woff?v16084828350) format('woff'),url(/fonts/GillSans_for_Oriflame/GillSans_for_Oriflame_Bold.ttf?v16084828350) format('truetype')}@font-face{font-family:"Oriflame Sans";font-weight:400;src:url(/fonts/Oriflame_Sans/OriflameSans-Regular.woff?v160addd6d50) format('woff'),url(/fonts/Oriflame_Sans/OriflameSans-Regular.ttf?v160addd6d50) format('truetype')}@font-face{font-family:"Oriflame Sans";font-weight:700;src:url(/fonts/Oriflame_Sans/OriflameSans-Bold.woff?v160addd6d50) format('woff'),url(/fonts/Oriflame_Sans/OriflameSans-Bold.ttf?v160addd6d50) format('truetype')}@font-face{font-family:'Garamond for Oriflame';src:url(/fonts/Garmond/Garamond-BoldItalic.woff?v16134433050) format('woff'),url(/fonts/Garmond/Garamond-BoldItalic.ttf?v16134432880) format('truetype');font-weight:700;font-style:italic}@font-face{font-family:'Garamond for Oriflame';src:url(/fonts/Garmond/GaramondforOriflame-Italic.woff?v16134436700) format('woff'),url(/fonts/Garmond/GaramondforOriflame-Italic.ttf?v16134436700) format('truetype');font-weight:400;font-style:italic}</style>
 
-    <link href="/bundles/css/mobile.min.css?v=3d2b4c66c6ceec9a8d6c32e5212a4c5b" rel="stylesheet">
+    <link href="/bundles/css/mobile.min.css?v=7860374256995b24f37239280ba357f1" rel="stylesheet">
 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -39,8 +39,8 @@
 
 @include('layouts.partials.modals')
 
-<script src="/bundles/webpack/vendor.bundle.js?v=05d0e4ee12db6c702a101521d958c8d2"></script>
-<script src="/bundles/webpack/desktop.bundle.js?v=c9c069b925f1d734fcd9166ed52fd1fd"></script>
+<script src="/bundles/webpack/vendor.bundle.js?v=d384c6b7b9fc22087b6a52bd500992ca"></script>
+<script src="/bundles/webpack/desktop.bundle.js?v=e7dada8c76535472acad9bb52e565ad8"></script>
 <script src="/bundles/webpack/scripts.bundle.js?v=e6e73cea0f48ece56c40480f71b83442"></script>
 
 <script src="/js/lifestyle.menu.common.js?v=d6e0781011b336794b84f09ffd1d422d"></script>
