@@ -128,6 +128,7 @@ ruinedRestoredMap = (function () {
 
         $('.gallery').removeClass('showItem');
         $('.map_alone').addClass('showItem');
+        
     });
     $('.show_photo').click(function () {
         $('.show_photo').removeClass('show_on');
@@ -136,9 +137,4 @@ ruinedRestoredMap = (function () {
         $('.map_alone').removeClass('showItem');
         $('.gallery').addClass('showItem');
     });
-})(),
-    likeActive = (function () {
-        $(this).attr('.like').click(function () {
-            $('.like').toggleClass('active_like');
-        })
-    })();
+})();
