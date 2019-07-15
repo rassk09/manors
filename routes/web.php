@@ -68,6 +68,9 @@ Route::group(['prefix' => 'admin', 'namespace'  => 'Admin', 'middleware' => ['ad
 
     Route::group(['prefix' => 'api'], function () {
         Route::post('manor/upload/image', 'ApiController@uploadManorImage');
+        Route::get('manor/{id}/photos', 'ApiController@getManorPhotos');
+        Route::get('manor/{id}/photos/{image}/delete', 'ApiController@deleteManorPhotos');
+
         Route::get('users/all', 'ApiController@getAllUsers');
 
 //        Route::post('events/upload/image', 'ApiController@uploadEventImage');
@@ -75,8 +78,7 @@ Route::group(['prefix' => 'admin', 'namespace'  => 'Admin', 'middleware' => ['ad
 //        Route::post('events/{id}/status', 'ApiController@changeEventStatus');
 //        Route::get('events/covers', 'ApiController@getAllEventCovers');
 //
-//        Route::get('event/{id}/photos', 'ApiController@getEventPhotos');
-//        Route::get('event/{id}/photos/{image}/delete', 'ApiController@deleteEventPhotos');
+
 //
 //        Route::get('event_formats', 'ApiController@getEventFormat')->name('admin_get_event_format');
 //        Route::get('event_formats/{id}/images', 'ApiController@getEventFormatImages');

@@ -220,7 +220,7 @@
             $.ajax({
                 // Uncomment the following to send cross-domain cookies:
                 //xhrFields: {withCredentials: true},
-                url: '{!! action('Admin\ApiController@getEventPhotos', ['id' => $item->id]) !!}',
+                url: '{!! action('Admin\ApiController@getManorPhotos', ['id' => $item->id]) !!}',
                 dataType: 'json',
                 context: $('form')[0]
             }).always(function () {

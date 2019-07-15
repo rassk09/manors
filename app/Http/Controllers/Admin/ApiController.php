@@ -2,19 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Event;
-use App\Models\EventFormat;
-use App\Models\EventFormatImage;
-use App\Models\EventLog;
-use App\Models\EventType;
-use App\Models\EventTypeImage;
-use App\Models\Test;
-use App\Models\TestPage;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use App\Admin\UploadHandler;
 use App\Mail\MailSend;
+use App\Models\Manor;
+use App\Models\ManorPhoto;
 
 class ApiController extends Controller
 {
@@ -33,30 +27,11 @@ class ApiController extends Controller
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    public function getEventPhotos(Request $request, $id)
+    public function getManorPhotos(Request $request, $id)
     {
         $out = ['files' => []];
-        $event = \App\Models\Event::findOrFail($id);
-        $images = $event->photos;
+        $manor = Manor::findOrFail($id);
+        $images = $manor->photos;
 
         foreach($images as $image) {
             $file = public_path($image->image);
@@ -68,11 +43,11 @@ class ApiController extends Controller
         return response()->json($out, 200);
     }
 
-    public function deleteEventPhotos(Request $request, $id, $image_id)
+    public function deleteManorPhotos(Request $request, $id, $image_id)
     {
-        $event = \App\Models\Event::findOrFail($id);
-        $image = \App\Models\EventPhoto::where('id', '=', $image_id)
-            ->where('event_format_id', '=', $id)
+        $manor = Manor::findOrFail($id);
+        $image = ManorPhoto::where('id', '=', $image_id)
+            ->where('manor_id', '=', $id)
             ->firstOrFail();
         $image->delete();
 
@@ -80,6 +55,25 @@ class ApiController extends Controller
             $image->image => true,
         ], 200);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public function getEventFormatImages(Request $request, $id)
     {
