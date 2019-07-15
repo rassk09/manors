@@ -69,10 +69,11 @@
             text-align: center;
             line-height: 2.7vw;
             font-size: 1vw;
-            border: solid 1px #979797;
+            border: solid 1px #1078d1;
             transition: 0.25s;
             cursor: pointer;
-            color: black;
+            color: white;
+            background-color: #1078d1;
 
             &:hover {
                 background-color: #010d25;
@@ -160,23 +161,29 @@
                 font-size: 1vw;
                 text-align: center;
                 line-height: 4.4vw;
-                border: 1px solid #979797;
                 float: left;
                 cursor: pointer;
                 transition: 0.2s;
+                color: white;
                 &:first-child {
                     margin-right: 2vw;
                 }
                 &:hover {
                     background-color: #010d25;
                     color: #ffffff;
-                    border: solid 1px #010d25;
+
                 }
                 &:active {
                     background-color: #1078d1;
                     color: #ffffff;
-                    border: solid 1px #1078d1;
+
                 }
+            }
+            .black_btn {
+                background-color: #010d25;
+            }
+            .blue_btn {
+                background-color: #1078d1;
             }
         }
         .more {
