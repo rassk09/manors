@@ -109,6 +109,7 @@
                         background-color: #010d25;
                         font-family: 'Playfair Display', serif;
                         font-size: 1vw;
+                        text-transform: uppercase;
                         line-height: 3.3vw;
                         outline: none;
                         border-radius: 0;
@@ -229,20 +230,18 @@
                 height: 26.3vw;
                 background-color: #ffffff;
                 margin-bottom: 1.6vw;
-                box-shadow: 0 0.2vw 0.3vw rgba(0,0,0,0.15);
-                &:nth-child(4n-1) {
-                   margin-right: 1.2vw;
-                }
-                &:nth-child(4n-2) {
+                box-shadow: 0 0.2vw 0.3vw rgba(0, 0, 0, 0.15);
+                &.mr {
                     margin-right: 1.2vw;
                 }
-                &:nth-child(4n-3) {
-                    margin-right: 1.2vw;
-                }
+
                 .card_photo {
                     width: 18vw;
                     height: 13.2vw;
                     background-color: gainsboro;
+                    background-position: center center;
+                    background-size: cover;
+
                     .brick {
                         display: block;
                         width: 2.8vw;
@@ -254,7 +253,6 @@
                         @mixin io heart-not-filled, svg;
                         background-size: 60%;
                         background-position: center center;
-                        content: '';
                         margin-right: 0.7vw;
                         display: inline-block;
                         vertical-align: text-top;
@@ -262,21 +260,14 @@
                         height: 2.8vw;
                         background-color: #010d25;
                         cursor: pointer;
-                    }
-                    .active_like {
-                        @mixin io heart-filled, svg;
-                        background-size: 60%;
-                        content: '';
-                        display: inline-block;
-                        vertical-align: text-top;
-                        width: 2.8vw;
-                        height: 2.8vw;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        background-color: #010d25;
-                        background-position: center center;
-                        cursor: pointer;
+                        &.active {
+                            @mixin io heart-filled, svg;
+                            background-size: 60%;
+                            background-position: center center;
+                            width: 2.8vw;
+                            height: 2.8vw;
+                            background-color: #010d25;
+                        }
                     }
                     .ruined {
                         @mixin io ruins, svg;
@@ -299,16 +290,15 @@
                         font-weight: bold;
                         text-transform: uppercase;
                         font-size: 0.9vw;
-                        padding: 1.2vw 0 0 1.1vw;
+                        padding: 1.2vw 1.1vw 0;
                         display: block;
                         height: 3vw;
                     }
                     .manor_address {
                         font-family: 'Gotham Pro Light';
-                        width: 13vw;
                         height: 5vw;
                         display: block;
-                        padding: 1vw 0 0 3.3vw;
+                        padding: 1vw 1.1vw 0 3.3vw;
                         font-size: 0.8vw;
                         position: relative;
                         cursor: pointer;
@@ -357,8 +347,9 @@
         }
         .map {
             width: 75.6vw;
-            height: 44.6vw;
+            height: calc(100vh - 5.8vw);
             background-color: gainsboro;
+            margin-top: 7.9vw;
             display: none;
             .gm-style-iw, .gm-style-iw-c {
                 border-radius: 0;
@@ -454,7 +445,7 @@
                     ul {
                         display: none;
                         padding-left: 1.6vw;
-                        padding-bottom: 0.8vw;
+                        padding-bottom: 0;
                         color: #4a4a4a;
                         font-size: 0.8vw;
                         li {
@@ -506,4 +497,31 @@
 
 .gm-style-iw, .gm-style-iw-c {
     border-radius: 0;
+}
+
+.bodyContent {
+    clear: fix;
+}
+.manorCard {
+    float: left;
+    background-color: #d8d8d8;
+    background-position: center center;
+    background-size: cover;
+    width: 7vw;
+    height: 4.4vw;
+}
+.manorName {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 12vw;
+    height: 4.4vw;
+    font-family: 'Gotham Pro Bold';
+    font-size: .8vw;
+    line-height: .8vw;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
 }

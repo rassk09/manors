@@ -27,6 +27,8 @@ class Controller extends BaseController
 
     protected $__auth;
 
+    protected $__favorites;
+
     /**
      * Controller constructor.
      *
@@ -61,6 +63,7 @@ class Controller extends BaseController
             '__route_path' => request()->path(),
             '__action_method' => $this->__route->getActionMethod(),
             '__isMobile' => $this->__isMobile,
+            '__favorites' => explode(',', session('favorite')),
         ]);
 
         return view($view, $data);

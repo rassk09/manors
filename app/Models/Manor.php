@@ -16,7 +16,7 @@ class Manor extends BaseModel
      * @var array
      */
     protected $fillable = [
-        'type_id', 'privacy_type_id', 'owner_id', 'name', 'image', 'region_id', 'area_id', 'address', 'geo_lat', 'geo_lng', 'is_active'
+        'type_id', 'privacy_type_id', 'owner_id', 'name', 'image', 'region_id', 'area_id', 'address', 'geo_lat', 'geo_lng', 'number', 'is_active'
     ];
 
     /**
@@ -80,6 +80,20 @@ class Manor extends BaseModel
         return $this->hasMany(ManorPhoto::class, 'manor_id')->orderBy('id', 'asc');
     }
 
+    public function texts() {
+        return $this->hasMany(ManorText::class, 'manor_id')->orderBy('id', 'asc');
+    }
+
+    public function privacy_type()
+    {
+        return $this->belongsTo(PrivacyType::class, 'privacy_type_id');
+    }
+
+    public function owner()
+    {
+        return $this->belongsTo(Owner::class, 'owner_id');
+    }
+
 
 
     /***********************************
@@ -93,6 +107,11 @@ class Manor extends BaseModel
      */
     public function getUploadPath() {
         return str_replace('//', '/', $this->baseImagesPath . '/' . $this->id . '/');
+    }
+
+    public function getType()
+    {
+        return $this->type_id == 1 ? 'Возрожденная' : 'Заброшенная';
     }
 
     /***********************************
@@ -119,6 +138,7 @@ class Manor extends BaseModel
     public function initializeAdminForm() {
         $this->setAdminFormControl([
             Control::text('name')->translatable()->setTitle('Название')->required(),
+            Control::text('number')->translatable()->setTitle('Реестровый номер'),
             Control::select('type_id', [0 => 'Заброшенные', 1 => 'Возрожденные'])->setTitle('Состояние усадьбы'),
             Control::select('privacy_type_id', PrivacyType::all()->pluck('name', 'id'))->setTitle('Вид собственности'),
             Control::select('owner_id', array_merge([0 => 'Нет владельца'], Owner::all()->pluck('name', 'id')->toArray()))->setTitle('Владелец'),

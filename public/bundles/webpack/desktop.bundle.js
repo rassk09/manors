@@ -3074,98 +3074,25 @@ var gallery = function () {
         $('.big_photo').css('background-image', 'url(' + $(this).attr('data-image') + ')');
     });
 }(),
-    manorSearch = function () {
+    mapPage = function () {
+    // list/map tabs
     $('.list_on').click(function () {
         $('.map_on').removeClass('blue_link');
         $('.list_on').addClass('blue_link');
-        $('.map').removeClass('manor_on');
-        $('.manors').addClass('manor_on');
+
+        $('.map').hide();
+        $('.manors').show();
     });
+
     $('.map_on').click(function () {
         $('.list_on').removeClass('blue_link');
         $('.map_on').addClass('blue_link');
-        $('.manors').removeClass('manor_on');
-        $('.map').addClass('manor_on');
-    });
-    $('.manor_address').click(function () {
-        $('.list_on').removeClass('blue_link');
-        $('.map_on').addClass('blue_link');
-        $('.manors').removeClass('manor_on');
-        $('.map').addClass('manor_on');
-    });
-}(),
-    visibleText = function () {
-    $('.first_item').click(function () {
-        $('.second_item').removeClass('active_item');
-        $('.third_item').removeClass('active_item');
-        $('.first_item').addClass('active_item');
 
-        $('.second_text').removeClass('visible_text');
-        $('.third_text').removeClass('visible_text');
-        $('.first_text').addClass('visible_text');
+        $('.map').show();
+        $('.manors').hide();
     });
-    $('.second_item').click(function () {
-        $('.first_item').removeClass('active_item');
-        $('.third_item').removeClass('active_item');
-        $('.second_item').addClass('active_item');
 
-        $('.first_text').removeClass('visible_text');
-        $('.third_text').removeClass('visible_text');
-        $('.second_text').addClass('visible_text');
-    });
-    $('.third_item').click(function () {
-        $('.second_item').removeClass('active_item');
-        $('.first_item').removeClass('active_item');
-        $('.third_item').addClass('active_item');
-
-        $('.second_text').removeClass('visible_text');
-        $('.first_text').removeClass('visible_text');
-        $('.third_text').addClass('visible_text');
-    });
-}(),
-    visibleUl = function () {
-    $('.item_name1').click(function () {
-        $('.item_name1').addClass('item_name_active');
-        $('.item_name2').removeClass('item_name_active');
-        $('.item_name3').removeClass('item_name_active');
-        $('.checkboxes1').slideDown();
-        $('.checkboxes2').slideUp();
-        $('.checkboxes3').slideUp();
-    });
-    $('.item_name2').click(function () {
-        $('.item_name2').addClass('item_name_active');
-        $('.item_name1').removeClass('item_name_active');
-        $('.item_name3').removeClass('item_name_active');
-        $('.checkboxes2').slideDown();
-        $('.checkboxes1').slideUp();
-        $('.checkboxes3').slideUp();
-    });
-    $('.item_name3').click(function () {
-        $('.item_name3').addClass('item_name_active');
-        $('.item_name2').removeClass('item_name_active');
-        $('.item_name1').removeClass('item_name_active');
-        $('.checkboxes3').slideDown();
-        $('.checkboxes2').slideUp();
-        $('.checkboxes1').slideUp();
-    });
-}(),
-    slider = function () {
-    var mySwiper = new _swiper2.default('.gallery .swiper-container', {
-        slidesPerView: 4,
-        spaceBetween: 5
-    });
-}(),
-    onePageScroll = function () {
-    $('#fullpage').onepage_scroll({
-        sectionContainer: "section",
-
-        pagination: false,
-        loop: false,
-        updateURL: false,
-        direction: "vertical"
-    });
-}(),
-    bootstrapSelect = function () {
+    // selectpicker
     $('.selectpicker').selectpicker({
         width: '20vw',
         height: '100%',
@@ -3175,9 +3102,98 @@ var gallery = function () {
         container: 'body',
         background: '#010d25'
     });
-    $("#down_btn").click(function () {
-        $(".main").moveDown();
+
+    // filters column
+    $('.filter_item .item_name').click(function () {
+        var is_active = $(this).hasClass('item_name_active');
+        console.log(is_active);
+
+        $('.filter_item .item_name').removeClass('item_name_active');
+        if (!is_active) {
+            $(this).addClass('item_name_active');
+        }
+
+        $('.filter_item .item_name:not(.item_name_active)').parents('.filter_item').find('ul').stop().slideUp();
+        $('.filter_item .item_name.item_name_active').parents('.filter_item').find('ul').stop().slideDown();
     });
+
+    // favorites
+    $('.single_manor .like').click(function () {
+        var button = $(this);
+        $.post(button.hasClass('active') ? button.attr('data-remove-url') : button.attr('data-add-url'), function (out) {
+            if (out.status == 'success') {
+                button.toggleClass('active');
+            }
+        }, 'json');
+    });
+
+    // region/area handler
+    function initSelect() {
+        var region_id = $('[name="region_id"]').val(),
+            area_id = $('[name="area_id"]').val();
+
+        $('[name="area_id"] option').hide();
+        if (region_id > 0) {
+            $('[name="area_id"] option[data-region="' + region_id + '"]').show();
+        }
+
+        $('[name="area_id"] option[value="0"]').show();
+        if (area_id > 0) {
+            $('[name="area_id"]').val(0);
+        }
+
+        $('.selectpicker').selectpicker('refresh');
+    }
+
+    $('[name="region_id"]').change(function () {
+        $('[name="area_id"]').val(0);
+        initSelect();
+    });
+
+    initSelect();
+
+    // filtering
+
+}(),
+    manorSearch = function () {
+    // $('.manor_address').click(function () {
+    //     $('.list_on').removeClass('blue_link');
+    //     $('.map_on').addClass('blue_link');
+    //     $('.manors').removeClass('manor_on');
+    //     $('.map').addClass('manor_on');
+    // });
+}(),
+    visibleText = function () {
+    $('.manor_info .item').click(function () {
+        var tab = $(this);
+
+        $('.manor_info .item').removeClass('active_item');
+        $(this).addClass('active_item');
+
+        $('.manor_info .text').hide();
+        $(tab.attr('data-target')).show();
+    });
+}(),
+    slider = function () {
+    var mySwiper = new _swiper2.default('.gallery .swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 5
+    });
+}(),
+    onePageScroll = function () {
+    if ($('body').hasClass('home_page')) {
+        $('#fullpage').onepage_scroll({
+            sectionContainer: "section",
+            pagination: false,
+            loop: false,
+            updateURL: false,
+            direction: "vertical"
+        });
+
+        $("#down_btn").click(function () {
+            $(".main").moveDown();
+        });
+    }
 }(),
     ruinedRestoredMap = function () {
     $('.show_map').click(function () {

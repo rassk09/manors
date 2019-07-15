@@ -11,8 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('map', 'HomeController@map')->name('map');
+Route::get('map/favorites', 'HomeController@favorites')->name('favorites');
+Route::get('map/manor/{id}', 'HomeController@manor')->name('manor');
+
+Route::group(['prefix' => 'api/v1'], function() {
+    Route::group(['prefix' => 'map'], function() {
+        Route::post('{id}/favorite', 'ApiController@addToFavorite')->name('addToFavorite');
+        Route::post('{id}/favorite/delete', 'ApiController@removeFromFavorite')->name('removeFromFavorite');
+    });
 });
 
 Route::group(['prefix' => 'admin', 'namespace'  => 'Admin', 'middleware' => ['admin']], function () {

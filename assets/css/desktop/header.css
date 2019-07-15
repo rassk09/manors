@@ -8,7 +8,7 @@ header {
     .menu {
         /*width: 90vw;*/
         height: 5.8vw;
-        padding-left: 5vw;
+        padding-left: 2.5vw;
         clear: fix;
         background-color: #ffffff;
         text-transform: uppercase;
@@ -31,24 +31,30 @@ header {
             &:last-child {
                 position: relative;
                 line-height: 1vw;
-                a:before{
-                    content: '';
-                    @mixin io heart-not-filled, svg;
-                    background-size: contain;
-                    background-position: bottom center;
-                    display: inline-block;
-                    width: 1vw;
-                    height: 0.8vw;
-                    margin-right: 0.5vw;
-                    transition: 0.25s;
+                a {
+                    &:before{
+                        content: '';
+                        @mixin io heart-not-filled, svg;
+                        background-size: contain;
+                        background-position: bottom center;
+                        display: inline-block;
+                        width: 1vw;
+                        height: 0.8vw;
+                        margin-right: 0.5vw;
+                        transition: 0.25s;
+                    }
+
+                    &.active:before {
+                        @mixin io heart-filled, svg;
+                        width: 1vw;
+                        height: 0.8vw;
+                        background-size: contain;
+                        background-position: bottom center;
+                    }
                 }
             }
             /*a:last-child:hover:before {
-                @mixin io heart-filled, svg;
-                width: 1vw;
-                height: 0.8vw;
-                background-size: contain;
-                background-position: bottom center;
+
             }*/
         }
     }

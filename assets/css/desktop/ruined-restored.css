@@ -216,35 +216,18 @@
                 overflow-x: hidden;
                 position: relative;
 
-                .first_text {
+                .text {
                     display: none;
                     font-size: 1vw;
                     line-height: 1.6vw;
                     transition: 0.25s;
                     p {
-                        padding: 0 2vw 2vw 0 ;
+                        padding: 0 2vw 0 0;
                     }
-                }
-                .second_text {
-                    display: none;
-                    font-size: 1vw;
-                    line-height: 1.6vw;
-                    transition: 0.25s;
-                    p {
-                        padding: 0 2vw 2vw 0 ;
+
+                    &.visible_text {
+                        display: block;
                     }
-                }
-                .third_text {
-                    display: none;
-                    font-size: 1vw;
-                    line-height: 1.6vw;
-                    transition: 0.25s;
-                    p {
-                        padding: 0 2vw 2vw 0 ;
-                    }
-                }
-                .visible_text {
-                    display: block;
                 }
             }
             .scrollbar_style::-webkit-scrollbar-track
