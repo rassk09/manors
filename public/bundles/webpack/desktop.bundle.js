@@ -3194,6 +3194,11 @@ var gallery = function () {
         $('.map_alone').removeClass('showItem');
         $('.gallery').addClass('showItem');
     });
+}(),
+    likeActive = function () {
+    $(this).attr('.like').click(function () {
+        $('.like').toggleClass('active_like');
+    });
 }(); // подключил jquery, что бы он был виден глобально(в том числе из консоли)
 
 /***/ }),

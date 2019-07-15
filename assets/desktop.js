@@ -136,4 +136,9 @@ ruinedRestoredMap = (function () {
         $('.map_alone').removeClass('showItem');
         $('.gallery').addClass('showItem');
     });
-})();
+})(),
+    likeActive = (function () {
+        $(this).attr('.like').click(function () {
+            $('.like').toggleClass('active_like');
+        })
+    })();

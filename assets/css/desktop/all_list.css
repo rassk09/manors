@@ -260,40 +260,32 @@
                         position: relative;
                     }
                     .like {
-                        .styled-check {
-                            position: absolute;
-                            opacity: 0;
-                            & + label {
-                                position: relative;
-                                cursor: pointer;
-                                padding: 0;
-                            }
-                            & + label:before {
-                                @mixin io heart-not-filled, svg;
-                                background-size: 60%;
-                                background-position: center center;
-                                content: '';
-                                margin-right: 0.7vw;
-                                display: inline-block;
-                                vertical-align: text-top;
-                                width: 2.8vw;
-                                height: 2.8vw;
-                                background-color: #010d25;
-                            }
-                            &:checked + label:after {
-                                @mixin io heart-filled, svg;
-                                background-size: 60%;
-                                content: '';
-                                display: inline-block;
-                                vertical-align: text-top;
-                                width: 2.8vw;
-                                height: 2.8vw;
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                background-position: center center;
-                            }
-                        }
+                        @mixin io heart-not-filled, svg;
+                        background-size: 60%;
+                        background-position: center center;
+                        content: '';
+                        margin-right: 0.7vw;
+                        display: inline-block;
+                        vertical-align: text-top;
+                        width: 2.8vw;
+                        height: 2.8vw;
+                        background-color: #010d25;
+                        cursor: pointer;
+                    }
+                    .active_like {
+                        @mixin io heart-filled, svg;
+                        background-size: 60%;
+                        content: '';
+                        display: inline-block;
+                        vertical-align: text-top;
+                        width: 2.8vw;
+                        height: 2.8vw;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: #010d25;
+                        background-position: center center;
+                        cursor: pointer;
                     }
                     .ruined {
                         @mixin io ruins, svg;
