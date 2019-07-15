@@ -18,6 +18,40 @@ use App\Mail\MailSend;
 
 class ApiController extends Controller
 {
+    // TODO: REWRITE
+    public function uploadManorImage(Request $request)
+    {
+        $upload_path = '/uploads/manors/';
+        $upload_handler = new UploadHandler([
+            'upload_dir' => public_path($upload_path),
+            'upload_url' => $upload_path,
+        ]);
+
+        $response = $upload_handler->get_response();
+        if ($file = $response['files'][0]) {
+            return $file->url;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
     public function getEventPhotos(Request $request, $id)
     {
         $out = ['files' => []];
@@ -222,20 +256,7 @@ class ApiController extends Controller
 
 
 
-    // TODO: REWRITE
-    public function uploadTestImage(Request $request)
-    {
-        $upload_path = '/uploads/tests/';
-        $upload_handler = new UploadHandler([
-            'upload_dir' => public_path($upload_path),
-            'upload_url' => $upload_path,
-        ]);
 
-        $response = $upload_handler->get_response();
-        if ($file = $response['files'][0]) {
-            return $file->url;
-        }
-    }
 
     public function createOrEditTestQuestion(Request $request)
     {

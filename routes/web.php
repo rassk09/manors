@@ -67,59 +67,60 @@ Route::group(['prefix' => 'admin', 'namespace'  => 'Admin', 'middleware' => ['ad
      ******************************************/
 
     Route::group(['prefix' => 'api'], function () {
+        Route::post('manor/upload/image', 'ApiController@uploadManorImage');
         Route::get('users/all', 'ApiController@getAllUsers');
 
-        Route::post('events/upload/image', 'ApiController@uploadEventImage');
-        Route::get('events/{id}/members', 'ApiController@getEventMembers');
-        Route::post('events/{id}/status', 'ApiController@changeEventStatus');
-        Route::get('events/covers', 'ApiController@getAllEventCovers');
-
-        Route::get('event/{id}/photos', 'ApiController@getEventPhotos');
-        Route::get('event/{id}/photos/{image}/delete', 'ApiController@deleteEventPhotos');
-
-        Route::get('event_formats', 'ApiController@getEventFormat')->name('admin_get_event_format');
-        Route::get('event_formats/{id}/images', 'ApiController@getEventFormatImages');
-        Route::get('event_formats/{id}/images/{image}/delete', 'ApiController@deleteEventFormatImages');
-
-        Route::get('event_types/{id}/images', 'ApiController@getEventTypeImages');
-        Route::get('event_types/{id}/images/{image}/delete', 'ApiController@deleteEventTypeImages');
-
-        Route::post('tests/upload/image', 'ApiController@uploadTestImage');
-        Route::post('tests/question/upload/image', 'ApiController@uploadTestQuestionImage');
-        Route::post('tests/question', 'ApiController@createOrEditTestQuestion');
-        Route::get('tests/question/delete', 'ApiController@deleteTestQuestion');
-        Route::post('tests/question/positions', 'ApiController@positionTestQuestion');
-        Route::get('tests/question/answers', 'ApiController@getTestAnswers');
-        Route::post('tests/question/answers', 'ApiController@editTestAnswers');
-
-        Route::get('tests/results', 'ApiController@getTestResults');
-        Route::get('tests/results/get', 'ApiController@getTestResult');
-        Route::post('tests/results', 'ApiController@createOrUpdateTestResult');
-        Route::get('tests/results/delete', 'ApiController@deleteTestResult');
-
-        Route::post('tests/pages/store', 'ApiController@storeTestsPages');
-        Route::post('tests/pages/update', 'ApiController@updateTestsPages');
-        Route::post('tests/pages/add', 'ApiController@addTestsPages');
-        Route::post('tests/pages/reset', 'ApiController@resetTestsPages');
-        Route::post('tests/pages/delete', 'ApiController@deleteTestsPages');
-
-        Route::post('documents/upload/file', 'ApiController@uploadDocumentsFile');
-
-        Route::post('beauty_books/upload/image', 'ApiController@uploadBeautyBooksImage');
-        Route::post('materials/upload/image', 'ApiController@uploadMaterialsImage');
-
-        Route::get('positions', 'ApiController@getPositions');
-        Route::post('positions', 'ApiController@addPositions');
-        Route::post('positions/delete', 'ApiController@deletePosition');
-        Route::post('positions/position', 'ApiController@positionPositions');
-        Route::post('positions/additional', 'ApiController@additionalPositions');
-        Route::post('positions/crop', 'ApiController@cropPositions');
-        Route::post('positions/publish', 'ApiController@publishPosition');
-        Route::post('positions/reset', 'ApiController@resetPosition');
-
-        Route::get('materials', 'ApiController@getAllMaterials');
-
-        Route::post('settings/upload/image', 'ApiController@uploadSettingImage');
+//        Route::post('events/upload/image', 'ApiController@uploadEventImage');
+//        Route::get('events/{id}/members', 'ApiController@getEventMembers');
+//        Route::post('events/{id}/status', 'ApiController@changeEventStatus');
+//        Route::get('events/covers', 'ApiController@getAllEventCovers');
+//
+//        Route::get('event/{id}/photos', 'ApiController@getEventPhotos');
+//        Route::get('event/{id}/photos/{image}/delete', 'ApiController@deleteEventPhotos');
+//
+//        Route::get('event_formats', 'ApiController@getEventFormat')->name('admin_get_event_format');
+//        Route::get('event_formats/{id}/images', 'ApiController@getEventFormatImages');
+//        Route::get('event_formats/{id}/images/{image}/delete', 'ApiController@deleteEventFormatImages');
+//
+//        Route::get('event_types/{id}/images', 'ApiController@getEventTypeImages');
+//        Route::get('event_types/{id}/images/{image}/delete', 'ApiController@deleteEventTypeImages');
+//
+//
+//        Route::post('tests/question/upload/image', 'ApiController@uploadTestQuestionImage');
+//        Route::post('tests/question', 'ApiController@createOrEditTestQuestion');
+//        Route::get('tests/question/delete', 'ApiController@deleteTestQuestion');
+//        Route::post('tests/question/positions', 'ApiController@positionTestQuestion');
+//        Route::get('tests/question/answers', 'ApiController@getTestAnswers');
+//        Route::post('tests/question/answers', 'ApiController@editTestAnswers');
+//
+//        Route::get('tests/results', 'ApiController@getTestResults');
+//        Route::get('tests/results/get', 'ApiController@getTestResult');
+//        Route::post('tests/results', 'ApiController@createOrUpdateTestResult');
+//        Route::get('tests/results/delete', 'ApiController@deleteTestResult');
+//
+//        Route::post('tests/pages/store', 'ApiController@storeTestsPages');
+//        Route::post('tests/pages/update', 'ApiController@updateTestsPages');
+//        Route::post('tests/pages/add', 'ApiController@addTestsPages');
+//        Route::post('tests/pages/reset', 'ApiController@resetTestsPages');
+//        Route::post('tests/pages/delete', 'ApiController@deleteTestsPages');
+//
+//        Route::post('documents/upload/file', 'ApiController@uploadDocumentsFile');
+//
+//        Route::post('beauty_books/upload/image', 'ApiController@uploadBeautyBooksImage');
+//        Route::post('materials/upload/image', 'ApiController@uploadMaterialsImage');
+//
+//        Route::get('positions', 'ApiController@getPositions');
+//        Route::post('positions', 'ApiController@addPositions');
+//        Route::post('positions/delete', 'ApiController@deletePosition');
+//        Route::post('positions/position', 'ApiController@positionPositions');
+//        Route::post('positions/additional', 'ApiController@additionalPositions');
+//        Route::post('positions/crop', 'ApiController@cropPositions');
+//        Route::post('positions/publish', 'ApiController@publishPosition');
+//        Route::post('positions/reset', 'ApiController@resetPosition');
+//
+//        Route::get('materials', 'ApiController@getAllMaterials');
+//
+//        Route::post('settings/upload/image', 'ApiController@uploadSettingImage');
     });
 });
 
