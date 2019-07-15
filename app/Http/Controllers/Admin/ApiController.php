@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\ManorText;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
@@ -53,6 +54,42 @@ class ApiController extends Controller
 
         return response()->json([
             $image->image => true,
+        ], 200);
+    }
+
+    public function getManorTexts(Request $request)
+    {
+        $results = ManorText::where('manor_id', '=', $request->manor_id)->get();
+        return response()->json(['results' => $results], 200);
+    }
+
+    public function getManorText(Request $request)
+    {
+        $result = ManorText::findOrFail($request->text_id);
+        return response()->json(['result' => $result], 200);
+    }
+
+    public function createOrUpdateManorText(Request $request)
+    {
+        if ($request->id) {
+            $result = ManorText::with('manor')->findOrFail($request->id);
+        } else {
+            $result = new ManorText;
+        }
+
+        $result->fill($request->all());
+        $result->save();
+
+        return $this->swalSuccessResponse('Текст добавлен', $result);
+    }
+
+    public function deleteManorText(Request $request)
+    {
+        $result = ManorText::findOrFail($request->text_id)
+            ->delete();
+
+        return response()->json([
+            'status' => 'success'
         ], 200);
     }
 
@@ -325,41 +362,7 @@ class ApiController extends Controller
 
     }
 
-    public function getTestResults(Request $request)
-    {
-        $results = \App\Models\TestResult::where('test_id', '=', $request->test_id)->get();
-        return response()->json(['results' => $results], 200);
-    }
 
-    public function getTestResult(Request $request)
-    {
-        $result = \App\Models\TestResult::findOrFail($request->result_id);
-        return response()->json(['result' => $result], 200);
-    }
-
-    public function createOrUpdateTestResult(Request $request)
-    {
-        if ($request->id) {
-            $result = \App\Models\TestResult::with('test')->findOrFail($request->id);
-        } else {
-            $result = new \App\Models\TestResult;
-        }
-
-        $result->fill($request->all());
-        $result->save();
-
-        return $this->swalSuccessResponse('Вопрос добавлен', $result);
-    }
-
-    public function deleteTestResult(Request $request)
-    {
-        $result = \App\Models\TestResult::findOrFail($request->result_id)
-            ->delete();
-
-        return response()->json([
-            'status' => 'success'
-        ], 200);
-    }
 
     public function storeTestsPages(Request $request)
     {

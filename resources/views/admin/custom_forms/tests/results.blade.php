@@ -12,8 +12,6 @@
         </div>
         <div class="col-md-12" id="jsResultsTable"></div>
     </div>
-
-
 @endsection
 
 @section('form_js')

@@ -67,9 +67,14 @@ Route::group(['prefix' => 'admin', 'namespace'  => 'Admin', 'middleware' => ['ad
      ******************************************/
 
     Route::group(['prefix' => 'api'], function () {
-        Route::post('manor/upload/image', 'ApiController@uploadManorImage');
-        Route::get('manor/{id}/photos', 'ApiController@getManorPhotos');
-        Route::get('manor/{id}/photos/{image}/delete', 'ApiController@deleteManorPhotos');
+        Route::post('manors/upload/image', 'ApiController@uploadManorImage');
+        Route::get('manors/{id}/photos', 'ApiController@getManorPhotos');
+        Route::get('manors/{id}/photos/{image}/delete', 'ApiController@deleteManorPhotos');
+
+        Route::get('manors/texts', 'ApiController@getManorTexts');
+        Route::get('manors/texts/get', 'ApiController@getManorText');
+        Route::post('manors/texts', 'ApiController@createOrUpdateManorText');
+        Route::get('manors/texts/delete', 'ApiController@deleteManorText');
 
         Route::get('users/all', 'ApiController@getAllUsers');
 
@@ -95,10 +100,7 @@ Route::group(['prefix' => 'admin', 'namespace'  => 'Admin', 'middleware' => ['ad
 //        Route::get('tests/question/answers', 'ApiController@getTestAnswers');
 //        Route::post('tests/question/answers', 'ApiController@editTestAnswers');
 //
-//        Route::get('tests/results', 'ApiController@getTestResults');
-//        Route::get('tests/results/get', 'ApiController@getTestResult');
-//        Route::post('tests/results', 'ApiController@createOrUpdateTestResult');
-//        Route::get('tests/results/delete', 'ApiController@deleteTestResult');
+
 //
 //        Route::post('tests/pages/store', 'ApiController@storeTestsPages');
 //        Route::post('tests/pages/update', 'ApiController@updateTestsPages');
