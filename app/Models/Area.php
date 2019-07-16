@@ -89,9 +89,9 @@ class Area extends BaseModel
     public function initializeAdminForm() {
         $this->setAdminFormControl([
             Control::text('name')->setTitle('Название')->required(),
-            Control::select('region_id', Region::all()->pluck('name', 'id'))->setTitle('Область'),
-            Control::text('geo_lat')->setTitle('Координаты - Широта')->required(),
-            Control::text('geo_lng')->setTitle('Координаты - Долгота')->required(),
+            Control::select('region_id', Region::orderBy('name', 'asc')->get()->pluck('name', 'id'))->setTitle('Область'),
+//            Control::text('geo_lat')->setTitle('Координаты - Широта')->required(),
+//            Control::text('geo_lng')->setTitle('Координаты - Долгота')->required(),
         ]);
     }
 

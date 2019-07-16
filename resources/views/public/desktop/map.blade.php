@@ -141,7 +141,7 @@
 
             $.each(locations, function(key, value) {
                 placemarks[value[0]] = new ymaps.Placemark([value[2], value[3]], {
-                    hintContent: 'Собственный значок метки',
+                    // hintContent: 'Собственный значок метки',
                     balloonContent: value[1]
                 }, {
                     iconLayout: 'default#image',
