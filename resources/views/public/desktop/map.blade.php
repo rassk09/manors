@@ -110,6 +110,7 @@
                     card_id = +card.attr('data-id'),
                     geo_lat = +card.attr('data-geo-lat'),
                     geo_lng = +card.attr('data-geo-lng'),
+                    link = +card.find('a').attr('href'),
                     type = +card.attr('data-type'),
                     image = card.attr('data-image'),
                     name = card.find('.manor_name').html();
@@ -121,7 +122,7 @@
                         <div class="bodyContent">
                             <div class="manorCard" style="background-image: url('${image}');"></div>
                             <div class="manorName">
-                                <span>${name}</span>
+                                <a href="${link}">${name}</a>
                             </div>
                         </div>
                     </div>`,
@@ -227,8 +228,11 @@
                     if (q != '') {
                         let card = $(this),
                             name = card.find('.manor_name').text().toLowerCase(),
-                            index = name.indexOf(q.toLowerCase());
-                        if (index < 0) {
+                            name_index = name.indexOf(q.toLowerCase()),
+                            address = card.find('.manor_address').text().toLowerCase(),
+                            address_index = address.indexOf(q.toLowerCase());
+
+                        if (name_index < 0 && address_index < 0) {
                             card.hide();
                         }
                     }
