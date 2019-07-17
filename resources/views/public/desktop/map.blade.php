@@ -110,7 +110,7 @@
                     card_id = +card.attr('data-id'),
                     geo_lat = +card.attr('data-geo-lat'),
                     geo_lng = +card.attr('data-geo-lng'),
-                    link = +card.find('a').attr('href'),
+                    link = card.find('a').attr('href'),
                     type = +card.attr('data-type'),
                     image = card.attr('data-image'),
                     name = card.find('.manor_name').html();
@@ -134,7 +134,7 @@
 
             let myMap = new ymaps.Map('map', {
                     center: [55.751574, 37.573856],
-                    zoom: 9
+                    zoom: 6
                 }, {
                     searchControlProvider: 'yandex#search'
                 });
@@ -147,21 +147,21 @@
                 }, {
                     iconLayout: 'default#image',
                     iconImageHref: '/images/desktop/' + value[4],
-                    iconImageSize: [28, 38],
-                    iconImageOffset: [-14, -38],
+                    iconImageSize: [30, 40],
+                    iconImageOffset: [-15, -40],
                     // balloonLayout: MyBalloonLayout,
                 });
 
                 myMap.geoObjects.add(placemarks[value[0]]);
             });
 
-            myMap.setBounds(myMap.geoObjects.getBounds(), {
-                checkZoomRange: true
-            }).then(function () {
-                if (myMap.getZoom() > 10) {
-                    myMap.setZoom(10);
-                }
-            });
+            // myMap.setBounds(myMap.geoObjects.getBounds(), {
+            //     checkZoomRange: true
+            // }).then(function () {
+            //     if (myMap.getZoom() > 10) {
+            //         myMap.setZoom(10);
+            //     }
+            // });
 
             function getObjectsWord(count) {
                 let words = ['объект', 'объекта', 'объектов'],
@@ -251,13 +251,13 @@
                 $('.how_many span').html($('.single_manor.visible').length + ' ' + getObjectsWord($('.single_manor.visible').length));
                 $('html, body').scrollTop(0);
 
-                myMap.setBounds(myMap.geoObjects.getBounds(), {
-                    checkZoomRange: true
-                }).then(function () {
-                    if (myMap.getZoom() > 10) {
-                        myMap.setZoom(10);
-                    }
-                });
+                // myMap.setBounds(myMap.geoObjects.getBounds(), {
+                //     checkZoomRange: true
+                // }).then(function () {
+                //     if (myMap.getZoom() > 10) {
+                //         myMap.setZoom(10);
+                //     }
+                // });
             }
 
             $('#filterForm').submit(function(e){

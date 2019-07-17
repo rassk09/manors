@@ -41,12 +41,12 @@
                     @if ($manor->texts->count() > 0)
                         <div class="paragraph">
                             @foreach($manor->texts as $text)
-                                <div class="item {{ $loop->first() ? 'active_item' : '' }}" data-target="#tab{{ $text->id }}">{{ $text->title }}</div>
+                                <div class="item {{ $loop->first ? 'active_item' : '' }}" data-target="#tab{{ $text->id }}">{{ $text->title }}</div>
                             @endforeach
                         </div>
                         <div class="info_text scrollbar_style">
                             @foreach($manor->texts as $text)
-                                <div class="text {{ $loop->first() ? 'visible_text' : '' }}" id="tab{{ $text->id }}">
+                                <div class="text {{ $loop->first ? 'visible_text' : '' }}" id="tab{{ $text->id }}">
                                     {!! $text->content !!}
                                 </div>
                             @endforeach
@@ -126,6 +126,9 @@
                                 <li class="small_photo swiper-slide" style="background-image: url('{{ $photo->image }}')" data-image="{{ $photo->image }}"></li>
                             @endforeach
                         </ul>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                 @endif
             </div>
